@@ -1,0 +1,236 @@
+<div data-role="page" id="page">
+	<meta charset="utf-8">
+   	<link rel="stylesheet" href="../css/pages/employee-profile-view.css" />
+   	
+	<div data-role="header" id="header" data-position="fixed">
+	
+		<div class="right">
+			<a class="menu-display" href="#right-panel">
+				<img alt="mmenu" src="../images/header/drawer_menu_header_button.png" />
+			</a>
+			
+			<a href="notifications-center-view.html" class="top-notifications" data-transition="slide">
+				<img alt="top-notifications" src="../images/header/top_notification_button.png" />
+			</a>
+		</div>
+		<div class="left">
+			<a href="home-view.html" data-transition="slide" data-direction="reverse">
+				<img alt="back" src="../images/header/back_arrow.png" />
+				<span class="back">Accueil</span>
+			</a>
+		</div>
+		<!--<div class="center with-logo"></div>-->
+		<div class="center">
+			<p class="current-title">Compte d'Utilisateur</p>
+		</div>
+		
+	</div>
+	
+	<div data-role="content" id="pageContent">
+		<div id="employee-profile-wrapper">
+			<div class="employee-profile-content">
+			
+				<div class="fields">
+					<div class="thumbnail-wrapper">
+						<div class="thumbnail" id="profil-image"></div>
+						<div class="camera" onclick="openFileOption('profile-thumb');return;">
+							<label for="profile-thumb"></label>
+							<input type="file" capture="camera" accept="image/*" id="profile-thumb" data-role="none" />
+						</div>
+						<!--  -- >
+				<div class="thumbnail" id="profil-image"></div>
+				<div id="camera-icon" onclick="openFileOption('profilPicField');return;">
+					<input type="file" capture="camera" accept="image/*" id="profilPicField" style="display :none" data-role="none">
+				</div>
+						<!--  -->
+					</div>
+					
+					<form data-role="tabs" action="" method="post" id="data-form">
+						<ul data-role="listview" data-inset="true" class="data-details-list" id="data-list">
+	
+							<li class="ui-field-contain">
+								<div class="ui-li-text attribute">
+									<p>
+										<span class="attribute-label">Nom</span> 
+										<span class="attribute-value"> 
+											<input name="last_name" data-wrapper-class="ui-custom" type="text" value="Bendriss" class="rightText" />
+										</span>
+									</p>
+								</div>
+								<div class="ui-li-thumb thumb-info">
+									<img src="../images/content/info.png" class="thumb-icon"></img>
+								</div>
+							</li>
+							<li class="ui-field-contain">
+								<div class="ui-li-text attribute">
+									<p>
+										<span class="attribute-label">Prénom</span> 
+										<span class="attribute-value"> 
+											<input name="first_name" data-wrapper-class="ui-custom" type="text" value="Mehdi" class="rightText" />
+										</span>
+									</p>
+								</div>
+								<div class="ui-li-thumb thumb-info">
+									<img src="../images/content/info.png" class="thumb-icon"></img>
+								</div>
+							</li>
+		
+							<li class="ui-field-contain">
+								<div class="ui-li-text attribute">
+									<p>
+										<span class="attribute-label">Fix</span> 
+										<span class="attribute-value"> 
+											<input name=fix_phone data-wrapper-class="ui-custom" type="tel" value="(+212) 5 38 35 76" class="rightText" />
+										</span>
+									</p>
+								</div>
+								<div class="ui-li-thumb thumb-info">
+									<img src="../images/content/info.png" class="thumb-icon" />
+								</div>
+		
+							</li>
+							<li class="ui-field-contain">
+								<div class="ui-li-text attribute">
+									<p>
+										<span class="attribute-label">Mobile</span> 
+										<span class="attribute-value"> 
+											<input name="mobile_phone" data-wrapper-class="ui-custom" type="tel" value="(+212) 6 28 20 69 61" class="rightText" />
+										</span>
+									</p>
+								</div>
+								<div class="ui-li-thumb thumb-info">
+									<img src="../images/content/info.png" class="thumb-icon" />
+								</div>
+							</li>		
+							<li class="ui-field-contain">
+								<div class="ui-li-text attribute">
+									<p>
+										<span class="attribute-label">Agence</span> 
+										<select data-role="none" class="select-informations" name="agencies" id="select-native-1">
+											<option value="agency0">Agence Attijari Beau Séjour 1</option>
+											<option value="agency1">Agence Attijari Mâarif 2</option>
+											<option value="agency2">Agence Attijari Sidi Maârouf 3</option>
+										</select>
+									</p>
+								</div>
+								<div class="ui-li-thumb thumb-info">
+									<img src="../images/content/info.png" class="thumb-icon"></img>
+								</div>
+							</li>
+							<li class="ui-field-contain">
+								<div class="ui-li-text attribute">
+									<p>
+										<span class="attribute-label">Départemennt</span> 
+										<select data-role="none" class="select-informations" name="department" id="select-native-1">
+											<option value="department0">Département Crédits Immobiliers</option>
+											<option value="department1">Département Crédits Agricoles</option>
+											<option value="department2">Département Investissements</option>
+											<option value="department3">Département Assurance</option>
+											<option value="department4">Département Crédit Automobile</option>
+										</select>
+									</p>
+								</div>
+								<div class="ui-li-thumb thumb-info">
+									<img src="../images/content/info.png" class="thumb-icon"></img>
+								</div>
+							</li>
+						</ul>
+	
+						<div class="save-actions ui-grid-a ui-responsive" id="button-div">
+							<div class="ui-block-a">
+								<a id="cs-cancel" href="home-view.html" class="ui-btn ui-shadow " data-transition="slide" data-direction="reverse">Annuler</a>
+							</div>
+							<div class="ui-block-b">
+								<a id="cs-continue" href="home-view.html" class="ui-btn ui-shadow" data-transition="slide">Continuer</a>
+							</div>
+						</div>
+					</form>	
+				</div>		
+			</div>
+		</div>
+	</div>
+	
+	<div data-role="footer" id="footer" data-position="fixed">			
+		<a href="home-view.html" id="homeAction" class="footer-action" data-transition="slide" data-role="none">
+			<img alt="Home" src="../images/footer/home.png" />
+			<span class="label">Accueil</span>
+		</a>
+		<a href="ask-expert-view.html" id="expertAction" class="footer-action" data-transition="slide" data-role="none">
+			<img alt="Expert" src="../images/content/ask_expert.png" /> 
+			<span class="label">Chat Expert</span>
+		</a>
+		<a href="#" id="changeSizeAction" class="footer-action right" data-transition="slide" data-role="none"> 
+			<img alt="Size" src="../images/footer/text-size.png" /> 
+			<span class="label">Taille Police</span>
+		</a>
+		<a href="settings-view.html" id="settingsAction" class="footer-action right" data-transition="slide" data-role="none">
+			<img alt="Settings" src="../images/footer/settings.png" />
+			<span class="label">Paramètres</span>
+		</a>
+		
+		<div id="center" class="with-logo"></div>
+	</div>
+	
+	<div data-role="panel" id="right-panel" data-display="push" data-position="right" class="ui-panel ui-panel-position-right ui-panel-display-push ui-panel-closed ui-body-b ui-panel-animate">
+		<div class="ui-panel-inner">
+			
+			<p class="employee-name">Bonjour, Ali</p>
+
+			<ul data-role="listview" data-inset="true">
+				<li>
+					<img src="../images/content/home_filled.png" />
+					<a href="home-view.html" data-rel="close">Accueil</a>
+				</li>
+				<li>
+					<img src="../images/content/settings_filled.png" />
+					<a href="settings-view.html" data-rel="close">Paramètres</a>
+				</li>
+				<li>
+					<img src="../images/content/notifications_filled.png" />
+					<a href="notifications-center-view.html" data-rel="close">Notifications</a>
+				</li>
+				<li>
+					<img src="../images/content/recent_activity.png" />
+					<a href="#">Activity Récente</a>
+				</li>
+				<li>
+					<img src="../images/content/news.png" />
+					<a href="#">News, Evènements et Projets</a>
+				</li>
+				<li>
+					<img src="../images/content/mortgage.png" />
+					<a href="mortgage-center-view.html" data-rel="close">Centre de Crédit Immobilier</a>
+				</li>
+				<li>
+					<img src="../images/content/amount.png" />
+					<a href="#">Centre d'Investissement </a>
+				</li>
+				<li>
+					<img src="../images/content/auto_loan.png" />
+					<a href="#">Centre de Crédit Automobile</a>
+				</li>
+				<li>
+					<img src="../images/content/insurance_center.png" />
+					<a href="#" data-rel="close">Centre d'Assurance</a>
+				</li>
+				<li>
+					<img src="../images/content/help.png" />
+					<a href="help-center-view.html" data-rel="close">Aide</a>
+				</li>
+				
+				<li class="logout">
+					<a href="#" data-rel="close">Déconnexion</a>
+				</li>
+				<li class="employee-account-information">
+					<a class="current" href="employee-profile-view.html" data-rel="close">Compte d'Utilisateur</a>
+				</li>
+				<li class="terms-of-service">
+					<a href="#">Conditions d'Utilisation</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	
+	<script src="../js/pages/employee-profile-view.js"></script>
+	
+</div>

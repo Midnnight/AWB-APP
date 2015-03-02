@@ -1,0 +1,57 @@
+<div data-role="page" id="page">
+	<meta charset="utf-8">
+   	<link rel="stylesheet" href="../css/pages/login-view.css" /> 
+   	
+   	<div data-role="popup" id="confirmationLoginPopup" class="ui-content" data-position-to="origin" data-theme="a" data-transition="fade">
+   		<p class="loader"></p>
+		<p class="loading-language"></p>
+		<p class="authentication-error"></p>
+	</div>
+   	
+	<div data-role="header" id="header" data-position="fixed">
+		<div class="right"></div>
+		<div class="left"></div>
+		<div class="center with-logo"></div>
+	</div>
+	
+	<div data-role="content" id="pageContent">
+		<div id="login-wrapper">
+			<div class="login-content">
+			
+				<div class="form" data-role="none">
+					
+					<p class="email-p">
+						<label class="email"></label>
+						<input type="text" name="email" placeholder="Addresse E-mail" />
+					</p>
+					<p class="pass-p">
+						<label class="password"></label>
+						<input type="password" name="password" placeholder="Mot de passe" />
+					</p>
+					<p class="submit-login">
+						<button>Connexion</button>
+					</p>
+					<p class="links">
+						<a href="forgot-password-view.html" class="left" data-transition="slide">Mot de passe oublié ?</a>
+					</p>
+					
+				</div>
+				
+				<div class="language-actions ui-grid-a ui-responsive">
+					<div class="ui-block-a">
+						<a href="#" class="ui-btn ui-shadow">العربيّة</a>
+					</div>
+					<div class="ui-block-b">
+						<a href="#" class="ui-btn ui-shadow">Français</a>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	
+	<p class="bottom-copyright">&copy;2014 Attijari Wafa Bank &nbsp; | &nbsp; <a>Conditions d'utilisation</a></p>
+	
+	<script src="../js/pages/login-view.js"></script>
+	
+</div>
