@@ -1,0 +1,256 @@
+#login-wrapper {
+	height : 100%;
+	height: 100%;
+}
+
+.login-content {
+	height: 100%;
+	height: 100%;
+	background-image: url(../../images/content/welcome-bg.jpg);
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.login-content div,
+.login-content p,
+.login-content input {
+	margin: 0;
+}
+
+.login-content .ui-input-text input {
+	min-height: 45px;
+}
+
+.login-content .form {
+	position: absolute;
+	width: 35%;
+	left: 32.5%;
+	top: 35%;
+}
+
+.login-content .form p {
+	margin-bottom: 10px;
+}
+
+.login-content .form p.email-p label,
+.login-content .form p.pass-p label {
+	position: absolute;
+	left: 10px;
+	top: 9px;
+	height: 30px;
+	width: 30px;
+	margin-bottom: 0;
+	z-index: 9;
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.login-content .form p.pass-p label {
+	top: 66px;
+	width: 17px;
+	left: 17px;
+}
+
+.login-content .form p.email-p label {
+	background: url(../../images/content/envelop.png);
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.login-content .form p.pass-p label {
+	background: url(../../images/content/lock.jpg);
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.login-content .form p.email-p .ui-input-text.ui-body-inherit.ui-corner-all.ui-shadow-inset,
+.login-content .form p.pass-p .ui-input-text.ui-body-inherit.ui-corner-all.ui-shadow-inset {
+	position: relative;
+	height: 47px;
+}
+
+.login-content .form p.email-p input,
+.login-content .form p.pass-p input {
+	position: absolute;
+	height: 47px;
+	top: 0;
+	left: 39px;
+	right: 0;
+	width: 85%;
+	text-transform: lowercase;
+}
+
+.login-content .form div.ui-input-text.ui-body-inherit.ui-corner-all.ui-shadow-inset {
+	margin: 0;
+	border: 1px solid #818181;
+	box-shadow: none;
+	outline: none;
+	border-radius: 5px;
+}
+
+p.submit-login {
+	color: #FFF;
+	margin-bottom: 10px;
+}
+
+p.submit-login button.ui-btn.ui-shadow.ui-corner-all {
+	height: 47px;
+	line-height: 23px;
+	font-size: 18px;
+	margin: 0;
+}
+
+.submit-login button.ui-btn.ui-shadow.ui-corner-all {
+	background: #ef5a49;
+	color: #FFF;
+	border: none;
+	text-shadow: none;
+	font-weight: normal;
+	border-radius: 7px;
+	box-shadow: none;
+}
+
+.submit-login div.ui-btn.ui-input-btn.ui-corner-all.ui-shadow input {
+	font-weight: normal;
+}
+
+p.links a.left.ui-link,
+p.links a.right.ui-link {
+	font-weight: normal;
+	float: left;
+	text-decoration: none;
+	color: #ef5a49;
+	font-size: 13px;
+	margin: 0 auto;
+	text-align: center;
+	width: 100%;
+}
+
+p.links a.right.ui-link {
+	float: right;
+}
+
+p.links a.left.ui-link:active,
+p.links a.right.ui-link:active,
+p.links a.left.ui-link:focus,
+p.links a.right.ui-link:focus {
+	color: #ef5a49;
+}
+
+.language-actions {
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	left: 10px;
+}
+
+.language-actions .ui-block-a a,
+.language-actions .ui-block-b a {
+	margin: 0;
+	border-color: #ef5a49;
+	color: #ef5a49;
+	text-shadow: none;
+	border-radius: 0px 0px 0px 15px;
+	box-shadow: none;
+	background-color: white;
+	font-weight: normal;
+	text-shadow: none;
+}
+
+.language-actions .ui-block-b a {
+	color: #FFF;
+	background-color: #ef5a49;
+}
+
+.language-actions .ui-block-b a {
+	border-radius: 0px 0px 15px 0px;
+	border-left: 0;
+}
+
+.language-actions .ui-block-a a:active,
+.language-actions .ui-block-b a:active, 
+.language-actions .ui-block-a a:focus,
+.language-actions .ui-block-b a:focus,
+.language-actions .ui-block-a a:hover,
+.language-actions .ui-block-b a:hover {
+	color: #FFF;
+	background-color: #ef5a49;
+	border-color: #ef5a49;
+	text-shadow: none;
+}
+
+p.bottom-copyright {
+	position: absolute;
+	bottom: 5px;
+	margin: 0;
+	font-size: 12px;
+	left: 25%;
+	width: 50%;
+	text-align: center;
+	color: #595959;
+}
+
+p.bottom-copyright a,
+p.bottom-copyright a:hover,
+p.bottom-copyright a:focus,
+p.bottom-copyright a:active {
+	font-weight: normal;
+	color: #595959;
+	text-decoration: none;
+}
+
+/*-- --*/
+#confirmationLoginPopup-popup {
+	max-width: 100%;
+	top: 88px;
+	right: 12px;
+	bottom: 32px;
+	left: 12px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	background: rgba(0, 0, 0, 0.67);
+}
+
+#confirmationLoginPopup {
+	width: 550px;
+	max-width: 550px;
+	margin: 0 auto;
+	margin-top: 50%;
+	box-shadow: none;
+	color: #FFF;
+	border-radius: 10px;
+	background: #ef5a49;
+}
+
+#confirmationLoginPopup p {
+	text-align: center;
+	font-size: 20px;
+}
+
+.ui-popup-container.fade.in.ui-popup-active {
+	position: absolute;
+	max-width: 100%;
+	top: 88px;
+	bottom: 32px;
+	z-index: 10;
+}
+/* --- */
+
+#confirmationLoginPopup p.loader {
+	background: url(../../images/loader.GIF);
+	float: left;
+	width: 60px;
+	height: 64px;
+	margin-top: 15px;
+	background-position: center;
+	background-size: cover;
+	margin-bottom: 0;
+	margin-top: 15px;
+}
+
+#confirmationLoginPopup p.authentication-error {
+	display: none;
+}
