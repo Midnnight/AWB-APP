@@ -1,4 +1,3 @@
-$('.counter').text(counter).show();
 fillFaqs (30);
 
 function fillFaqs (count) {

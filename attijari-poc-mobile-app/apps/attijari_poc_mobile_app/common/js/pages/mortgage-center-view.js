@@ -1,4 +1,3 @@
-$('.counter').text(counter).show();
 $(".applications").on ("click", function() {
 	loadPage("applications-search-view.html");
 });

@@ -1,4 +1,3 @@
-$('.counter').text(counter).show();
 $(".go-to-faq").on ("click", function () {
 		loadPage ("faqs-view.html");
 	});

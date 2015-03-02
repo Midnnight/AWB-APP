@@ -1,4 +1,3 @@
-$('.counter').text(counter).show();
 var count = 0;
 var answer = "";
 var chatType = "text";

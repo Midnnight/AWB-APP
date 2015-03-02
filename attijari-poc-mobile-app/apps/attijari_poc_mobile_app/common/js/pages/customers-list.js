@@ -1,6 +1,7 @@
 /**
  * 
  */
+
 $('#listview').children('li').on('click', function () {
 	  // alert('Selected Name=' + $(this).find("id").text());
 	   customer = customers[$(this).attr("id")];

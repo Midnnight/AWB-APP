@@ -1,13 +1,18 @@
 <div data-role="page" id="page">
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="../css/pages/property-view.css">
+	
+	<!-- Popup -->
+		<div data-role="popup" id="InfoPlusProperty" class="ui-content" data-theme="a" data-transition="fade">
+			<p class="validateTips">Plus d'info.</p>
+		</div>
+	
 <!-- 	Header -->
 	<div data-role="header" id="header" data-position="fixed">
 
 		<div class="right">
 			<a class="menu-display" href="#right-panel"> <img alt="mmenu" src="../images/header/drawer_menu_header_button.png" />
 			</a> <a href="notifications-center-view.html" class="top-notifications" data-transition="slide"> <img alt="top-notifications" src="../images/header/top_notification_button.png" />
-			<span class="counter"></span>
 			</a>
 		</div>
 		<div class="left">
@@ -34,12 +39,12 @@
 						<p>
 							<span class="attribute-label">Adresse</span> 
 							<span class="attribute-value">
-								<input class="rightText" data-wrapper-class="ui-custom" type="text" name="propAddress" id="name" value=""/>
+								<input class="rightText" data-wrapper-class="ui-custom" type="text" name="propAddress" id="adresse2" value=""/>
 							</span>
 						</p>
 					</div>
 					<div class="ui-li-thumb thumb-info">
-						<img src="../images/content/info.png" class="thumb-icon"></img>
+						<img src="../images/content/info.png" class="thumb-icon" id="initProperty"></img>
 					</div>
 	
 				</li>
@@ -51,7 +56,7 @@
 						<p>
 							<span class="attribute-label">Nouveau/Existant/Pas de Structure</span>
 							<span class="attribute-value">
-								<select data-role="none" class="select-informations" name="isExisting" id="select-native-1">
+								<select data-role="none" class="select-informations" name="isExisting" id="structure">
 									<option value="New">Nouveau</option>
 									<option value="Existing">Existant</option>
 									<option value="NoStruct">Pas de Structure</option>
@@ -72,7 +77,7 @@
 						<p>
 							<span class="attribute-label">Residentiel/Commercial</span>
 							<span class="attribute-value">
-	    						<select data-role="none" class="select-informations" name="usage" id="select-native-1">
+	    						<select data-role="none" class="select-informations" name="usage" id="usage">
 									<option value="personal">Residentiel</option>
 									<option value="commercial">Commercial</option>
 								</select>
@@ -92,7 +97,7 @@
 						<p>
 							<span class="attribute-label">Type d'immeuble</span> 
 							<span class="attribute-value">
-								<select data-role="none" class="select-informations" name="rooms" id="select-native-1">
+								<select data-role="none" class="select-informations" name="rooms" id="rooms">
 									<option value="studio">Studio</option>
 									<option value="1">1 pièce</option>
 									<option value="2">2 pièces</option>
@@ -115,7 +120,7 @@
 						<p>
 							<span class="attribute-label">Résidence primaire</span> 
 							<span class="attribute-value">
-								<select data-role="none" class="select-informations" name="Primary" id="select-native-1">
+								<select data-role="none" class="select-informations" name="Primary" id="Primary">
 									<option value="Yes">Oui</option>
 									<option value="No">Non</option>
 								</select>
@@ -134,7 +139,7 @@
 						<p>
 							<span class="attribute-label">Surface de terre (m²)</span> 
 							<span class="attribute-value">
-								<input class="rightText" data-wrapper-class="ui-custom" type="number" name="propAddress" id="name" value="300"/>
+								<input class="rightText" data-wrapper-class="ui-custom" type="number" name="surface" id="surface" value="300"/>
 							</span>
 						</p>
 					</div>
@@ -150,7 +155,7 @@
 						<p>
 							<span class="attribute-label">Surface de construction/logement (m²)</span> 
 							<span class="attribute-value">
-								<input class="rightText" data-wrapper-class="ui-custom" type="number" name="liveableArea" id="name" value="280"/>
+								<input class="rightText" data-wrapper-class="ui-custom" type="number" name="liveableArea" id="liveableArea" value="280"/>
 							</span>
 						</p>
 					</div>
@@ -167,7 +172,7 @@
 						<p>
 							<span class="attribute-label">Entrepreneurs en construction</span> 
 							<span class="attribute-value">
-								<input class="rightText" data-wrapper-class="ui-custom" type="text" name="contractors" id="name" value=""/>
+								<input class="rightText" data-wrapper-class="ui-custom" type="text" name="contractors" id="contractors" value=""/>
 							</span>
 						</p>
 					</div>
@@ -183,7 +188,7 @@
 						<p>
 							<span class="attribute-label">Estimation de construction (MAD)</span>
 							<span class="attribute-value">
-								<input class="rightText" data-wrapper-class="ui-custom" type="number" name="constructionSum" id="name" value="560000"/>
+								<input class="rightText" data-wrapper-class="ui-custom" type="number" name="constructionSum" id="constructionSum" value="560000"/>
 							</span>
 						</p>
 					</div>
@@ -199,7 +204,7 @@
 						<p>
 							<span class="attribute-label">Estimation de propriété (MAD)</span>
 							<span class="attribute-value">
-								<input class="rightText" data-wrapper-class="ui-custom" type="number" name="evaluationSum" id="name" value="600000"/>
+								<input class="rightText" data-wrapper-class="ui-custom" type="number" name="evaluationSum" id="evaluationSum" value="600000"/>
 							</span>
 						</p>
 					</div>
@@ -234,12 +239,12 @@
 		</form>
 		<div class="ui-grid-a ui-responsive" id="button-div">
 			<div class="ui-block-a">
-				<a id="cs-cancel" href="customer-view.html"
+				<a id="cs-cancel" href="customer-view.html" onclick="PropertyInfoTmp();"
 					class="ui-btn ui-shadow " data-transition="slide" data-direction="reverse">Retour</a>
 			</div>
 			<div class="ui-block-b">
-				<a id="cs-continue" href="mortgage-terms.html"
-					class="ui-btn ui-shadow " data-transition="slide">Continuer</a>
+				<a id="cs-continue" href="#"
+					class="ui-btn ui-shadow " data-transition="slide" onclick="continuerVersMortgageTerms();">Continuer</a>
 			</div>
 		</div>
 	</div>

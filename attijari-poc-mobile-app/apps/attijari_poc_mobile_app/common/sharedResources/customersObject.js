@@ -1,7 +1,5 @@
 var problemSubmitted = false;
-var counter = 4;
-var cls = 0;
-var NotifLu = new Array();
+
 var customers = [ {
 	"id" : 0,
 	"Title" : "Mr",
@@ -280,50 +278,26 @@ var applications = [
 		} ];
 var property = {};
 var customer = {};
-var terms = {
-	amount : "200000",
-	interest : "7",
-	duration : "12"
-
+var terms={
+	amount:"200000",
+	interest:"7",
+	duration:"12"
+		
 };
 
 var sourcePage = {
 	title : "",
 	url : ""
-};
+}
 
 var expertNotification = {
-	pic : "",
-	title : "",
-	status : "",
-	date : "",
-	content : ""
-};
-//add by Ouchen Imad 25/02/2015
-var AllNotification = [
-		{
-			pic : " style='background-image: url(../images/mehdi.jpg);'",
-			title : "[Client : M. Bendriss Mehdi] : Eligibilité de crédit",
-			extract : "Bonjour, Nous avons bien reçu votre demande concernant l\'éligibilité de Monsieur Bendriss Mehdi ingénieur informatique chez IBM Maroc"
+	pic: "",
+	title: "",
+	status: "",
+	date: "",
+	content: ""
+}
 
-		},
-		{
-			pic : "style='background-image: url(../images/ayoub.jpg);'",
-			title : "[Client : M. Naciri Ayoub] : Rachat de crédit",
-			extract : "Bonjour, Nous avons examiné méticuleusement la demande de Monsieur Ayoub Ingénieur informatique à IBM Maroc voulant racheter ses crédits"
-		},
-		{
-			pic : " style='background-image: url(../images/souhail.jpg);'",
-			title : "[Client : M. Guennouni Souhail] : Eligibilité de crédit",
-			extract : "Bonjour, Nous avons bien reçu votre demande concernant l\'éligibilité de Monsieur Souhail Guennouni ingénieur informatique chez IBM Maroc",
-		},
-		{
-			pic : " style='background-image: url(../images/cristian.jpg);'",
-			title : "[Client : M. Carstoiu Cristian] : Crédit pour étranger",
-			extract : "Bonjour, Nous avons bien reçu votre demande concernant un emprunt pour investissement sur le sol marocain de Monsieur Carstoiu Représentant "
-		}, ]
-
-var NotReadNotification = JSON.parse(JSON.stringify(AllNotification));
 function getCustomer() {
 	return customer;
 }

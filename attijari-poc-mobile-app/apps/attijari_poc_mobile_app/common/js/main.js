@@ -23,17 +23,17 @@ $(document).on ("pageshow", function () {
 		loadPage ("login-view.html");
 		connected = 0;
 	});
-
+	
 	$('div *, p *, span *, li *, a *').each(function () {
-		var el = $(this);
-		var size = parseInt(el.css('font-size'));
-		el.data('font-size', size);
+	    var el = $(this);
+	    var size = parseInt(el.css('font-size'));
+	    el.data('font-size', size);
 	});
-
+	
 	$("#changeSizeAction").on ("click", function () {
-
+		
 		countZoom ++;
-
+		
 		if (countZoom % 3 == 0) {
 			zoom = 0;
 			changeSize ();
@@ -44,7 +44,7 @@ $(document).on ("pageshow", function () {
 			zoom = 3;
 			changeSize ();
 		}
-
+		
 	});
 });
 
@@ -58,8 +58,8 @@ function setConnectionStatus (status) {
 
 function changeSize () {
 	$('div *, p *, span *, li *, a *').each(function () {
-		var el = $(this);
-		var size = el.data('font-size');
-		el.css('font-size', Math.max (size + zoom, 0) + 'px');
-	});
+        var el = $(this);
+        var size = el.data('font-size');
+        el.css('font-size', Math.max (size + zoom, 0) + 'px');
+    });
 }
