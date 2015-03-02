@@ -1,3 +1,4 @@
+$('.counter').text(counter).show();
 $("select.select-informations").on ("change", function () {
 	loan ();
 });

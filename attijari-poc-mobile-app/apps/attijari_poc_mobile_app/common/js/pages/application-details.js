@@ -1,3 +1,4 @@
+$('.counter').text(counter).show();
 loadProfileImage (customer.id);
 
 resetFormCustomer ();

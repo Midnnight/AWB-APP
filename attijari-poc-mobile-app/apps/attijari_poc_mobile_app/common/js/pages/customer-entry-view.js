@@ -3,7 +3,6 @@
  */
 
 
-
 $("#existinguser").click(function() {
 
 $("#pageContent").load("pages/customers-list.html", function () {

@@ -1,0 +1,1 @@
+$('.counter').text(counter).show();

@@ -11,6 +11,7 @@
 			
 			<a href="notifications-center-view.html" class="top-notifications" data-transition="slide">
 				<img alt="top-notifications" src="../images/header/top_notification_button.png" />
+				<span class="counter"></span>
 			</a>
 		</div>
 		<div class="left">
@@ -32,17 +33,11 @@
 			
 				<div class="fields">
 					<div class="thumbnail-wrapper">
-						<div class="thumbnail" id="profil-image"></div>
-						<div class="camera" onclick="openFileOption('profile-thumb');return;">
+						<div class="thumbnail"></div>
+						<div class="camera">
 							<label for="profile-thumb"></label>
-							<input type="file" capture="camera" accept="image/*" id="profile-thumb" data-role="none" />
+							<input type="file" accept="image/*" id="profile-thumb" data-role="none" />
 						</div>
-						<!--  -- >
-				<div class="thumbnail" id="profil-image"></div>
-				<div id="camera-icon" onclick="openFileOption('profilPicField');return;">
-					<input type="file" capture="camera" accept="image/*" id="profilPicField" style="display :none" data-role="none">
-				</div>
-						<!--  -->
 					</div>
 					
 					<form data-role="tabs" action="" method="post" id="data-form">

@@ -1,24 +1,21 @@
 <div data-role="page" id="page">
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="../css/pages/customer-view.css">
-	<!-- popup -->
-	<div data-role="popup" id="InfoPlusCustomer" class="ui-content" data-theme="a" data-transition="fade">
-		<p class="validateTips">Plus d'info.</p>
-	</div>
-	<!-- /fin popup -->
+
 	<div data-role="header" id="header" data-position="fixed">
 
 
 		<div class="right">
-			<a class="menu-display" href="#right-panel"> <img alt="menu"
+			<a class="menu-display" href="#right-panel"> <img alt="mmenu"
 				src="../images/header/drawer_menu_header_button.png" />
 			</a> <a href="notifications-center-view.html" class="top-notifications" data-stransition="slide"> <img alt="top-notifications"
 				src="../images/header/top_notification_button.png" />
+				<span class="counter"></span>
 			</a>
 		</div>
 		<div class="left">
 			<a href="#" data-rel="back"> <img alt="back"
-				src="../images/header/back_arrow.png"/> <span class="back">Retour</span>
+				src="../images/header/back_arrow.png" /> <span class="back">Retour</span>
 			</a>
 		</div>
 
@@ -51,14 +48,13 @@
 						<div class="ui-li-text attribute">
 							<p>
 								<span class="attribute-label">Prénom</span> <span
-									class="attribute-value"> <input name="First_name" id="First_name"
+									class="attribute-value"> <input name="First_name"
 									data-wrapper-class="ui-custom" type="text" class="rightText" />
 								</span>
 							</p>
 						</div>
 						<div class="ui-li-thumb thumb-info">
-								<img src="../images/content/info.png" class="thumb-icon" id="initialisation"></img>
-														
+							<img src="../images/content/info.png" class="thumb-icon"></img>
 						</div>
 
 					</li>
@@ -67,7 +63,7 @@
 						<div class="ui-li-text attribute">
 							<p>
 								<span class="attribute-label">Nom</span> <span
-									class="attribute-value"> <input name="Last_name" id="Last_name"
+									class="attribute-value"> <input name="Last_name"
 									data-wrapper-class="ui-custom" type="text" class="rightText" />
 								</span>
 							</p>
@@ -85,7 +81,7 @@
 						<div class="ui-li-text attribute">
 							<p>
 								<span class="attribute-label">Date de naissance</span> <span
-									class="attribute-value"> <input name="dob" id="dob"
+									class="attribute-value"> <input name="dob"
 									data-wrapper-class="ui-custom" type="date" class="rightText" />
 								</span>
 							</p>
@@ -102,7 +98,7 @@
 						<div class="ui-li-text attribute">
 							<p>
 								<span class="attribute-label">Adresse</span> <span
-									class="attribute-value"> <input name="adresse" id="adresse"
+									class="attribute-value"> <input name="adresse"
 									data-wrapper-class="ui-custom" type="text" class="rightText" />
 								</span>
 							</p>
@@ -119,7 +115,7 @@
 						<div class="ui-li-text attribute">
 							<p>
 								<span class="attribute-label">Ville</span> <span
-									class="attribute-value"> <input name="ville" id="ville"
+									class="attribute-value"> <input name="ville"
 									data-wrapper-class="ui-custom" type="text" class="rightText" />
 								</span>
 							</p>
@@ -156,10 +152,10 @@
 							<p>
 								<span class="attribute-label">Langue préférée </span> <span class="attribute-value"> <select
 									data-role="none" class="select-informations" name="language"
-									id="language">
-										<option value="Français">Français</option>
-										<option value="Arabe">Arabe</option>
-										<option value="Anglais">Anglais</option>
+									id="select-native-1">
+										<option value="0">Français</option>
+										<option value="1">Arabe</option>
+										<option value="2">Anglais</option>
 								</select>
 								</span>
 							</p>
@@ -177,7 +173,7 @@
 								<span class="attribute-label">
 								Numéro de Portable
 								</span> <span
-									class="attribute-value"> <input name="Mobile" id="mobile"
+									class="attribute-value"> <input name="Mobile"
 									data-wrapper-class="ui-custom" type="tel" class="rightText" />
 								</span>
 							</p>
@@ -196,7 +192,7 @@
 								<span class="attribute-label">
 								Numéro de Fix
 								</span> <span
-									class="attribute-value"> <input name="telfix" id="telfix"
+									class="attribute-value"> <input name="Mobile"
 									data-wrapper-class="ui-custom" type="tel" class="rightText" />
 								</span>
 							</p>
@@ -213,7 +209,7 @@
 						<div class="ui-li-text attribute">
 							<p>
 								<span class="attribute-label">Adresse email</span> <span
-									class="attribute-value"> <input name="Email" id="Email"
+									class="attribute-value"> <input name="Email"
 									data-wrapper-class="ui-custom" type="email" class="rightText" />
 								</span>
 							</p>
@@ -231,7 +227,7 @@
 							<p>
 								<span class="attribute-label">Méthode de communication préférée </span> <span class="attribute-value"> <select
 									data-role="none" class="select-informations" name="comm"
-									id="communication">
+									id="select-native-1">
 										<option value="1">Email</option>
 										<option value="2">Téléphone</option>
 								</select>
@@ -250,7 +246,7 @@
 						<div class="ui-li-text attribute">
 							<p>
 								<span class="attribute-label">Compte Courant #</span> <span
-									class="attribute-value"> <input id="compteC"
+									class="attribute-value"> <input
 									data-wrapper-class="ui-custom" type="number" class="rightText" />
 								</span>
 							</p>
@@ -268,7 +264,7 @@
 						<div class="ui-li-text attribute">
 							<p>
 								<span class="attribute-label">Compte d'épargne #</span> <span
-									class="attribute-value"> <input id="compteE"
+									class="attribute-value"> <input
 									data-wrapper-class="ui-custom" type="number" class="rightText" />
 								</span>
 							</p>
@@ -285,7 +281,7 @@
 						<div class="ui-li-text attribute">
 							<p>
 								<span class="attribute-label">Salaire Mensuel (MAD)</span> <span
-									class="attribute-value"> <input name="Monthly_income" id="Monthly_income"
+									class="attribute-value"> <input name="Monthly_income"
 									data-wrapper-class="ui-custom" type="number" class="rightText" />
 								</span>
 							</p>
@@ -302,7 +298,7 @@
 						<div class="ui-li-text attribute">
 							<p>
 								<span class="attribute-label">Revenus additionels</span> <span
-									class="attribute-value"> <input id="add_income"
+									class="attribute-value"> <input
 									data-wrapper-class="ui-custom" type="number" class="rightText" />
 								</span>
 							</p>
@@ -368,11 +364,12 @@
 			</form>
 			<div class="ui-grid-a ui-responsive" id="button-div">
 				<div class="ui-block-a">
-					<a href="mortgage-center-view.html" onclick="viderTemp();"
+					<a href="mortgage-center-view.html"
 						class="ui-btn ui-shadow " data-transition="slide" data-direction="reverse">Annuler</a>
 				</div>
 				<div class="ui-block-b">
-					<a href="#"	class="ui-btn ui-shadow " data-transition="slide" onclick="continuerVersProperty();">Continuer</a>
+					<a href="property-view.html"
+						class="ui-btn ui-shadow " data-transition="slide">Continuer</a>
 				</div>
 			</div>
 		</div>

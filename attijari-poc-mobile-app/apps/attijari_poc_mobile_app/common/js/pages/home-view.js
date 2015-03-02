@@ -1,3 +1,4 @@
+$('.counter').text(counter).show();
 var globalarray = [];
 
 if (!problemSubmitted) {
