@@ -1,7 +1,14 @@
 <div data-role="page" id="page">
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="../css/pages/mortgage-terms.css">
-<!-- 	Header -->
+	
+	<!-- Popup -->
+		<div data-role="popup" id="InfoPlusMotgage" class="ui-content" data-theme="a" data-transition="fade">
+			<p class="validateTips">Plus d'info.</p>
+		</div>
+	
+	<!-- 	Header -->
+	<!-- 	Header -->
 	<div data-role="header" id="header" data-position="fixed">
 
 		<div class="right">
@@ -42,7 +49,7 @@
 							<p>
 								<span class="attribute-label">Durée du prêt</span>
 								<span class="attribute-value">
-									<select data-role="none" class="select-informations" name="mortgage_term" id="select-native-1" onchange=loan()>
+									<select data-role="none" class="select-informations" name="mortgage_term"  id="mortgage_term" onchange="loan();">
 										<option value="0">5ans</option>
 										<option value="1">10ans</option>
 										<option value="2">15ans</option>
@@ -61,13 +68,13 @@
 					</li>
 					<li class="ui-field-contain">
 						<div class="thumb">
-							<img src="../images/content/percent.png" class="thumb-icon"></img>
+							<img src="../images/content/percent.png" class="thumb-icon" id="initCredit"></img>
 						</div>
 						<div class="ui-li-text attribute">
 							<p>
 								<span class="attribute-label">Taux d'intérêt</span>
 								<span class="attribute-value">
-									<select data-role="none" class="select-informations" name="interesType" id="select-native-2" onchange=loan()>
+									<select data-role="none" class="select-informations" name="interesType" id="interesType" onchange="loan();">
 										<option value="0"> 1%</option>
 										<option value="1"> 2%</option>
 										<option value="2"> 3%</option>
@@ -94,7 +101,7 @@
 							<p>
 								<span class="attribute-label">Montant du prêt</span>
 								<span class="attribute-value">
-									<input class="rightText" data-wrapper-class="ui-custom" type="number" name="loanAmount" id="name" onkeyup="loan()"/>
+									<input class="rightText" data-wrapper-class="ui-custom" type="number" name="loanAmount" id="loanAmount" onkeyup="loan()"/>
 								</span>
 							</p>
 						</div>
@@ -110,7 +117,7 @@
 							<p>
 								<span class="attribute-label">Date d'origine</span>
 								<span class="attribute-value">
-									<input data-wrapper-class="ui-custom" type="text" name="orgDate" class="rightText" readonly/>
+									<input data-wrapper-class="ui-custom" type="text" name="orgDate" id="orgDate" class="rightText" readonly/>
 								</span>
 							</p>
 						</div>
@@ -126,7 +133,7 @@
 							<p>
 								<span class="attribute-label">Echéance</span>
 								<span class="attribute-value">
-									<input data-wrapper-class="ui-custom" type="text" name="payOffDate" class="rightText" readonly/>
+									<input data-wrapper-class="ui-custom" type="text" name="payOffDate" id="payOffDate" class="rightText" readonly/>
 								</span>
 							</p>
 						</div>
@@ -142,7 +149,7 @@
 							<p>
 								<span class="attribute-label">Mensualité</span>
 								<span class="attribute-value">
-									<input class="rightText" data-wrapper-class="ui-custom" type="text" name="monthlyPay" id="name" readonly/>
+									<input class="rightText" data-wrapper-class="ui-custom" type="text" name="monthlyPay" id="monthlyPay" readonly/>
 								</span>
 							</p>
 						</div>
@@ -158,12 +165,12 @@
 			</form>
 			<div class="ui-grid-a ui-responsive" id="button-div">
 			<div class="ui-block-a">
-				<a id="cs-cancel" href="property-view.html"
+				<a id="cs-cancel" href="property-view.html" onclick="MTermsInfoTmp();"
 					class="ui-btn ui-shadow " data-transition="slide" data-direction="reverse">Retour</a>
 			</div>
 			<div class="ui-block-b">
 				<a id="submit" href="#"
-					class="ui-btn ui-shadow " data-transition="slide">Envoyer le dossier</a>
+					class="ui-btn ui-shadow " data-transition="slide" onclick="VerifierEnvoyer();">Envoyer le dossier</a>
 			</div>
 		</div>
 		</div>

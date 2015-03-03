@@ -1,9 +1,10 @@
 $('.counter').text(counter).show();
-$('#submit').on('click', function() {
+function envoyerDossier() {
 		confirmDialog("Envoyer la Demande?", function() {
+			NouveauCreditImmobilier=AnnulerInit;
 			loadPage("next-best-offer-view.html");
 		});
-	});
+	}
 
 	$(".image").on("click", function() {
 		sourcePage.title = "Mortgage Terms";
@@ -55,9 +56,9 @@ function loan() {
 	var cn = document.getElementById("pageContent").getElementsByTagName(
 			"input");
 
-	var select = document.getElementById("select-native-1");
+	var select = document.getElementById("mortgage_term");
 	var mValue = select.options[select.selectedIndex].value;
-	var select2 = document.getElementById("select-native-2");
+	var select2 = document.getElementById("interesType");
 	var mValue2 = select2.options[select2.selectedIndex].value;
 
 	var terms = 0;
@@ -167,4 +168,85 @@ function todayDate() {
 	today = mm + '/' + dd + '/' + yyyy;
 	return today;
 
+}
+
+//les fonctions de verification des champs
+
+function updateTips( t ) {
+	var tips = $( ".validateTips" );
+	tips.text(t);
+	$("#InfoPlusProperty").popup ({ tolerance: "0px, 12px, 32px, 12px" });
+	$("#InfoPlusProperty").popup ("open");
+	
+	setTimeout (
+		function () {
+			$("#InfoPlusProperty").popup ("close");
+		}, 
+		5000
+	);
+}
+
+function checkLength( o, n, min, max ) {
+    if ( o.val().length > max || o.val().length < min ) {
+      updateTips( "Le champs " + n + " doit avoir entre " + min + " et " + max + " caractères." );
+      return false;
+    } else {
+      return true;
+    }
+  }
+
+function checkRegexp( o, regexp, n ) {
+    if ( !( regexp.test( o.val() ))) {
+      updateTips( n );
+      return false;
+    } else {
+      return true;
+    }
+  }
+
+function VerifierEnvoyer(){
+	
+	var interesType=$("#interesType").val();
+	var mortgage_term=$("#mortgage_term").val();
+	var loanAmount=$("#loanAmount");
+	var orgDate=$("#orgDate");
+	var payOffDate=$("#payOffDate");
+	var monthlyPay=$("#monthlyPay");
+	
+	
+	var valid = true;
+		
+		
+	if(valid){
+		MTermsInfoTmp();
+		envoyerDossier();
+	}
+}
+
+/* Initialisation / restitution des champs du formulaire */
+
+$("#initCredit").on("load",function(){
+	setTimeout (InitialiserMTerms(),500);
+});
+
+function InitialiserMTerms(){
+	//alert("init");
+	$('#interesType option[value='+NouveauCreditImmobilier.DetailCredit.TauxInteret+']').attr('selected','selected');
+	$('#mortgage_term option[value='+NouveauCreditImmobilier.DetailCredit.DureePret+']').attr('selected','selected');
+	$("#loanAmount").val(NouveauCreditImmobilier.DetailCredit.MontantPret);
+	//$("#orgDate").val(NouveauCreditImmobilier.DetailCredit.DateOrg);
+	//$("#payOffDate").val(NouveauCreditImmobilier.DetailCredit.Echeance);
+	//$("#monthlyPay").val(NouveauCreditImmobilier.DetailCredit.Mensualite);
+	loan();
+}
+
+function MTermsInfoTmp(){
+	// 
+	NouveauCreditImmobilier.DetailCredit.TauxInteret=$("#interesType").val();
+	NouveauCreditImmobilier.DetailCredit.DureePret=$("#mortgage_term").val();
+	NouveauCreditImmobilier.DetailCredit.MontantPret=$("#loanAmount").val();
+	NouveauCreditImmobilier.DetailCredit.DateOrg=$("#orgDate").val();
+	NouveauCreditImmobilier.DetailCredit.Echeance=$("#payOffDate").val();
+	NouveauCreditImmobilier.DetailCredit.Mensualite=$("#monthlyPay").val();
+	//alert(JSON.stringify(NouveauCreditImmobilier.DetailCredit));
 }

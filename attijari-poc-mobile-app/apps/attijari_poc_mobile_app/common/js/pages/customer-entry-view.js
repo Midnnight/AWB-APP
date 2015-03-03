@@ -22,7 +22,6 @@ $(".left .back").click(function() {
 	});
 
 
-
 $("#newuser").on ("click", function () {
 	customer_index = -1;
 	$("#pageContent").load("pages/customer-view.html", function () {
