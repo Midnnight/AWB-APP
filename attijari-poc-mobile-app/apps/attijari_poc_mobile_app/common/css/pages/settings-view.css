@@ -177,3 +177,10 @@
 	background-color: #ef5a49;
 	text-shadow: none;
 }
+
+#out {
+	text-decoration: none;
+	font-family: inherit;
+	color: inherit;
+	font-weight:normal;
+}
