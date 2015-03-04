@@ -9,6 +9,7 @@ var zoom = 0;
 
 function wlCommonInit () {
 	// Common initialization code goes here
+	initstore();
 	if (connected == 0) {
 		loadPage ("pages/login-view.html");
 	} else {
@@ -66,6 +67,24 @@ function changeSize () {
 	});
 }
 
+
+function initstore(){
+
+	//WL.JSONStore.destroyAll();
+	
+	return WL.JSONStore.init(collections)
+
+	.then(function () { 
+		WL.JSONStore.get('store').replace(receiveNotification);
+		WL.JSONStore.get('store').replace(soundNotification);
+		WL.JSONStore.get('store').replace(lightNotification);
+
+		alert(WL.JSONStore.get('store').name);
+	}) 
+	.fail(function(errorObject) {
+		//
+	});
+}
 /* JavaScript content from js/main.js in folder ipad */
 // This method is invoked after loading the main HTML and successful initialization of the Worklight runtime.
 function wlEnvInit(){

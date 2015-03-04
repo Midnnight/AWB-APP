@@ -7,6 +7,7 @@ var zoom = 0;
 
 function wlCommonInit () {
 	// Common initialization code goes here
+	initstore();
 	if (connected == 0) {
 		loadPage ("pages/login-view.html");
 	} else {
@@ -61,5 +62,22 @@ function changeSize () {
 		var el = $(this);
 		var size = el.data('font-size');
 		el.css('font-size', Math.max (size + zoom, 0) + 'px');
+	});
+}
+
+
+function initstore(){
+
+	//WL.JSONStore.destroyAll();
+	
+	return WL.JSONStore.init(collections)
+
+	.then(function () { 
+		WL.JSONStore.get('store').replace(receiveNotification);
+		WL.JSONStore.get('store').replace(soundNotification);
+		WL.JSONStore.get('store').replace(lightNotification);
+	}) 
+	.fail(function(errorObject) {
+		//
 	});
 }

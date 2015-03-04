@@ -1,7 +1,6 @@
 var problemSubmitted = false;
 var counter = 4;
 var cls = 0;
-var NotifLu = new Array();
 var customers = [ {
 	"id" : 0,
 	"Title" : "Mr",
