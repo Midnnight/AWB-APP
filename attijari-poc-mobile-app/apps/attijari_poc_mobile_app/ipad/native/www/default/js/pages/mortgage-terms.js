@@ -1,5 +1,6 @@
 
 /* JavaScript content from js/pages/mortgage-terms.js in folder common */
+$('.counter').text(counter).show();
 function envoyerDossier() {
 		confirmDialog("Envoyer la Demande?", function() {
 			NouveauCreditImmobilier=AnnulerInit;

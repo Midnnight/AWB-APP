@@ -1,5 +1,6 @@
 
 /* JavaScript content from js/pages/mortgage-center-view.js in folder common */
+$('.counter').text(counter).show();
 $(".applications").on ("click", function() {
 	loadPage("applications-search-view.html");
 });

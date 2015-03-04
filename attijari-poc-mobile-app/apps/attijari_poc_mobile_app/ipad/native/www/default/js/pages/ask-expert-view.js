@@ -1,5 +1,6 @@
 
 /* JavaScript content from js/pages/ask-expert-view.js in folder common */
+$('.counter').text(counter).show();
 var count = 0;
 var answer = "";
 var chatType = "text";

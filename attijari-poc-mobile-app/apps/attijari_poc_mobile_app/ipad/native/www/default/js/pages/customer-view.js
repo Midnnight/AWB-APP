@@ -1,7 +1,6 @@
 
 /* JavaScript content from js/pages/customer-view.js in folder common */
-
-
+$('.counter').text(counter).show();
 $("#takePictureField").on ("change", gotPic);
 	
 	loadProfileImage(customer.id);
@@ -114,7 +113,6 @@ function displayAsImage3(file, containerid) {
 	}
 }
 
-
 //    fonctions de validation des champs 
 
 $("#initialisation").on("load",function(){
@@ -164,7 +162,7 @@ function continuerVersProperty(){
 	var telRegex = /(\+\d+(\s|-))?0\d(\s|-)?(\d{2}(\s|-)?){4}/;
 	var nomRegex = /^([a-zA-Z_\s])+$/i;
 	var villeRegex = /^([a-zA-Z\s])+$/i;
-	var compte= /^([0-9]+\.?[0-9]*)+$/i;///[0-9]+\.?[0-9]*/;
+	var compte= /^([0-9]+\.?[0-9]*)+$/i;// /[0-9]+\.?[0-9]*/;
 	
 	var fname=$("#First_name");
 	var lname=$("#Last_name");

@@ -1,5 +1,6 @@
 
 /* JavaScript content from js/pages/employee-profile-view.js in folder common */
+$('.counter').text(counter).show();
 $(document).on ("pageshow", function () {
 	
 	

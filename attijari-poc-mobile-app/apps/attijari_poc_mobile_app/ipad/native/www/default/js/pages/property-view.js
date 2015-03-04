@@ -1,5 +1,7 @@
 
 /* JavaScript content from js/pages/property-view.js in folder common */
+$('.counter').text(counter).show();
+
 $("#initProperty").on("load",function(){
 	setTimeout (InitialiserProperty(),500);
 });

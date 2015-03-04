@@ -1,5 +1,6 @@
 
 /* JavaScript content from js/pages/home-view.js in folder common */
+$('.counter').text(counter).show();
 var globalarray = [];
 
 if (!problemSubmitted) {

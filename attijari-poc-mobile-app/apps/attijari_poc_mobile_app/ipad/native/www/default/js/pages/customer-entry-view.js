@@ -5,7 +5,6 @@
  */
 
 
-
 $("#existinguser").click(function() {
 
 $("#pageContent").load("pages/customers-list.html", function () {
@@ -23,7 +22,6 @@ $(".left .back").click(function() {
 		});
 		
 	});
-
 
 
 $("#newuser").on ("click", function () {

@@ -11,5 +11,3 @@ Messages = {
 	// passwordLabel : "Password:",
 	// invalidUsernamePassword : 'Invalid username or password.' 
 };
-
-

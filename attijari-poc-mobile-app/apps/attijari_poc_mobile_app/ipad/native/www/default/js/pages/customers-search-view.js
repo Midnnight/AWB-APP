@@ -1,5 +1,6 @@
 
 /* JavaScript content from js/pages/customers-search-view.js in folder common */
+$('.counter').text(counter).show();
 $(".cancel").on("click", function () {
 	$("div.ui-input-search.ui-shadow-inset.ui-input-has-clear.ui-body-inherit.ui-corner-all input").val ("");
 	$("a.ui-input-clear.ui-btn.ui-icon-delete.ui-btn-icon-notext.ui-corner-all").addClass("ui-input-clear-hidden");
@@ -8,8 +9,21 @@ $(".cancel").on("click", function () {
 $('#list-results').children ('li').on ('click', function () {
 	customer = customers[$(this).attr("id")];
 	property = customer.properties[0];
+	alert("You swiped left!");
 	selectionnerClient();
 });
+
+$("#titrerech").on("swipeleft",function(){
+	alert("coucou");
+});
+
+/*$('#list-results').children ('li').on ('swipeleft', function () {
+	//customer = customers[$(this).attr("id")];
+	//property = customer.properties[0];
+	$(this).hide( "slide", { direction: "down"  }, 1000 );
+	alert("You swiped left!");
+});*/
+
 
 function selectionnerClient(){
 	NouveauCreditImmobilier.Infoclient.Prenom=		customer.First_name;

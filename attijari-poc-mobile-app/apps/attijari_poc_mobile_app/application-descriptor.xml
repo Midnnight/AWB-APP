@@ -12,7 +12,9 @@
         <copyright>Copyright My Company</copyright>
     </author>
     <mainFile>index.html</mainFile>
-    <features/>
+    <features>
+        <JSONStore/>
+    </features>
     <thumbnailImage>common/images/thumbnail.png</thumbnailImage>
     <ipad bundleId="com.attijaripocmobileapp" version="1.0">
         <worklightSettings include="false"/>

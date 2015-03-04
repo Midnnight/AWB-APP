@@ -1,5 +1,6 @@
 
 /* JavaScript content from js/pages/mortgage-simulator-view.js in folder common */
+$('.counter').text(counter).show();
 $("select.select-informations").on ("change", function () {
 	loan ();
 });

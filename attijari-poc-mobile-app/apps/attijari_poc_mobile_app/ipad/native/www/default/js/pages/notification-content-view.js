@@ -1,5 +1,6 @@
 
 /* JavaScript content from js/pages/notification-content-view.js in folder common */
+$('.counter').text(counter).show();
 $(".thumbnail-c").attr ("style", "background-image: url(" + expertNotification.pic + ");");
 	$(".title-c").html (expertNotification.title);
 	$(".status-c").html (expertNotification.status);

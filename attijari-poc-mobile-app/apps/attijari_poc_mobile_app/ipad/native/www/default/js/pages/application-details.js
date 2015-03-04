@@ -1,5 +1,6 @@
 
 /* JavaScript content from js/pages/application-details.js in folder common */
+$('.counter').text(counter).show();
 loadProfileImage (customer.id);
 
 resetFormCustomer ();

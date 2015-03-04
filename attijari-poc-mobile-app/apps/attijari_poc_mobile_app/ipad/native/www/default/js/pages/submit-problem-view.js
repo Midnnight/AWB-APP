@@ -1,5 +1,6 @@
 
 /* JavaScript content from js/pages/submit-problem-view.js in folder common */
+$('.counter').text(counter).show();
 $(".send-problem-button").on ("click", function () {
 	confirmDialog("Votre problème a été soumis.", function() {
 		loadPage("home-view.html");
