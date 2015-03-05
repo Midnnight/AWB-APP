@@ -78,8 +78,6 @@ function initstore(){
 		WL.JSONStore.get('store').replace(receiveNotification);
 		WL.JSONStore.get('store').replace(soundNotification);
 		WL.JSONStore.get('store').replace(lightNotification);
-
-		alert(WL.JSONStore.get('store').name);
 	}) 
 	.fail(function(errorObject) {
 		//

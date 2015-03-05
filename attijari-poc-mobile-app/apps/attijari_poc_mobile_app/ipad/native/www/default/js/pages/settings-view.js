@@ -32,7 +32,6 @@ $("#receive").on("click", function() {
 		// Dependencies
 		var $ = jQuery, _ = lodash;
 		
-		alert( $("#receive").is(':checked'));
 		receiveNotification[0].json.value = $("#receive").is(':checked');
 
 	}(WL, WLJQ, WL_));
@@ -47,7 +46,6 @@ $("#light").on("click", function() {
 		// Dependencies
 		var $ = jQuery, _ = lodash;
 		
-		alert( $("#light").is(':checked'));
 		lightNotification[0].json.value = $("#light").is(':checked');
 
 	}(WL, WLJQ, WL_));
@@ -62,7 +60,6 @@ $("#sound").on("click", function() {
 		// Dependencies
 		var $ = jQuery, _ = lodash;
 		
-		alert( $("#sound").is(':checked'));
 		soundNotification[0].json.value = $("#sound").is(':checked');
 
 	}(WL, WLJQ, WL_));
