@@ -1,6 +1,14 @@
 
 /* JavaScript content from js/pages/settings-view.js in folder common */
 $('.counter').text(counter).show();
+
+var path = 0;
+
+$('#receive').attr('checked',receiveNotification[0].json.value);
+$('#sound').attr('checked', soundNotification[0].json.value);
+$('#light').attr('checked', lightNotification[0].json.value);
+$("#language-flip").val(langue[0].json.value);
+
 $("#languagePopup").popup({
 	tolerance : "0px, 12px, 32px, 12px"
 });
@@ -12,16 +20,26 @@ $("#language-flip").slider({
 });
 
 $(".language-actions .ui-block-a a").on("click", function() {
-	//$("#languagePopup").popup("close");
+	path =0;
+	$("#languagePopup").popup("close");
 });
 
 $(".language-actions .ui-block-b a").on("click", function() {
-	//$("#languagePopup").popup("close");
+	path =1;
+	$("#languagePopup").popup("close");
 });
 
-$('#receive').attr('checked',receiveNotification[0].json.value);
-$('#sound').attr('checked', soundNotification[0].json.value);
-$('#light').attr('checked', lightNotification[0].json.value);
+$( "#languagePopup" ).bind({
+	popupafterclose: function(event, ui) {
+		if(path == 1){
+			//loadPage ("home-view.html");
+			$("#language-flip").val().slider("refresh");
+		}
+		else{
+			$("#language-flip").val(!$("#language-flip").val()).slider("refresh");
+		}
+	}
+})
 
 $("#receive").on("click", function() {
 
@@ -31,7 +49,7 @@ $("#receive").on("click", function() {
 
 		// Dependencies
 		var $ = jQuery, _ = lodash;
-		
+
 		receiveNotification[0].json.value = $("#receive").is(':checked');
 
 	}(WL, WLJQ, WL_));
@@ -45,7 +63,7 @@ $("#light").on("click", function() {
 
 		// Dependencies
 		var $ = jQuery, _ = lodash;
-		
+
 		lightNotification[0].json.value = $("#light").is(':checked');
 
 	}(WL, WLJQ, WL_));
@@ -59,8 +77,23 @@ $("#sound").on("click", function() {
 
 		// Dependencies
 		var $ = jQuery, _ = lodash;
-		
+       
 		soundNotification[0].json.value = $("#sound").is(':checked');
 
 	}(WL, WLJQ, WL_));
+});
+
+
+$( "#languagePopup" ).bind({
+	popupafteropen: function(event, ui) {
+
+	(function(WL, jQuery, lodash) {
+
+		'use strict';
+
+		// Dependencies
+		var $ = jQuery, _ = lodash;
+		langue[0].json.value = $("#language-flip").val();
+	}(WL, WLJQ, WL_));
+	}
 });

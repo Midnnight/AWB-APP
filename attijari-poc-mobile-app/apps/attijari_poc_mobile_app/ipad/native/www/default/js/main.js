@@ -77,12 +77,14 @@ function initstore(){
 			WL.JSONStore.get('store').add(receiveNotification);
 			WL.JSONStore.get('store').add(soundNotification);
 			WL.JSONStore.get('store').add(lightNotification);
+			WL.JSONStore.get('langue_store').add(langue);
 			initstore=1;
 		}
 		else {
 			WL.JSONStore.get('store').replace(receiveNotification);
 			WL.JSONStore.get('store').replace(soundNotification);
 			WL.JSONStore.get('store').replace(lightNotification);
+			WL.JSONStore.get('langue_store').replace(langue);
 		}
 	}) 
 	.fail(function(errorObject) {

@@ -3,7 +3,7 @@
 	<link rel="stylesheet" href="../css/pages/settings-view.css" />
 
 	<div data-role="popup" id="languagePopup" class="ui-content"
-		data-dismissible="true" data-theme="a" data-transition="fade">
+		data-dismissible="true" data-theme="a" data-transition="pop">
 		<div data-rold="header" class="header" data-theme="a">
 			<h1>Changer la langue</h1>
 		</div>
@@ -12,16 +12,10 @@
 
 			<div class="language-actions ui-grid-a ui-responsive">
 				<div class="ui-block-a">
-					Annuler
-					<!--  
 					<a href="#" class="ui-btn ui-shadow">Annuler</a>
-					-->
 				</div>
 				<div class="ui-block-b">
-					Continuer
-					<!--  
 					<a href="#" class="ui-btn ui-shadow">Continuer</a>
-					-->
 				</div>
 			</div>
 		</div>
@@ -84,10 +78,11 @@
 
 					<h3>Langue</h3>
 					<p class="select">
-						<select name="flip" id="language-flip" data-role="slider">
-							<option value="french">Français</option>
+						<label for="language-flip">Langue par défaut</label> <select
+							name="language-flip" id="language-flip" data-role="slider">
+							<option value="french">français</option>
 							<option value="arabic">العربية</option>
-						</select> <label for="light">Langue par défaut</label>
+						</select>
 					</p>
 
 					<h3>A propos de</h3>

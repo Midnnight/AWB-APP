@@ -1,6 +1,9 @@
 
 /* JavaScript content from sharedResources/Store.js in folder common */
+//Flag create or replace value to store collection
 var initstore= 0;
+
+//collections saving notification parameter value
 var collections = {
 	store : {
 		searchFields : {
@@ -9,6 +12,16 @@ var collections = {
 		}
 	}
 };
+
+//store saving application language
+var collections = {
+		langue_store : {
+			searchFields : {
+				name : 'string',
+				value : 'string'
+			}
+		}
+	};
 
 
 var receiveNotification = [ {
@@ -30,5 +43,13 @@ var lightNotification = [ {
 	json : {
 		name : 'light',
 		value : true
+	}
+} ];
+
+var langue = [ {
+	_id : 0,
+	json : {
+		name : 'langue',
+		value : 'arabic'
 	}
 } ];
