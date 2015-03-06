@@ -191,6 +191,7 @@ p.phone {
 	padding-top: 20px;
 }
 
+
 .status .id {
 	font-size: 17px;
 	margin: 0;
@@ -265,7 +266,7 @@ p.phone {
 }
 
 .behind a.ui-btn {
-    width: 68px;
+    width: 85%;/*68px;*/
     margin: 0px;
     float: right;
     border: none;
@@ -286,3 +287,18 @@ p.phone {
     background-color: orange;
     text-shadow: none;
 } 
+
+.sendEmail{
+	position: absolute;
+	/*right: 0;*/
+	left:100%;
+	top: 0;
+	bottom: 0;
+	margin: 0;
+	width: 20%;
+	line-height: 100px;
+	background: #000;
+	text-shadow: none;
+	color: #FFF;
+	text-align: center;
+}
