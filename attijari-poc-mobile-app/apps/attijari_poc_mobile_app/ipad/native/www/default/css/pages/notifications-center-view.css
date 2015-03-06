@@ -1,0 +1,204 @@
+
+/* Stylesheet content from css/pages/notifications-center-view.css in folder common */
+.notifications-content {
+	padding-top: 30px;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.ui-li-text h3 {
+	font-weight: normal;
+	text-shadow: none;
+}
+
+.ui-li-text p {
+	font-weight: normal;
+	text-shadow: none;
+}
+
+.notifications-categories ul #all-notifications {
+	height: 30px;
+	line-height: 30px;
+}
+
+.notifications-categories ul #unread-notifications {
+	height: 30px; 
+	line-height: 30px; 
+	text-align: center; 
+	padding-left: 30%;
+}
+
+.notifications-categories ul #all-notifications.ui-btn-active.ui-link.ui-btn,
+.notifications-categories ul #unread-notifications.ui-btn-active.ui-link.ui-btn {
+	color: #FFF;
+	background-color: #ef5a49;
+}
+
+.notifications-categories ul #all-notifications.ui-btn-active.ui-link.ui-btn span,
+.notifications-categories ul #unread-notifications.ui-btn-active.ui-link.ui-btn span {
+	color: #FFF;
+	border-color: #FFF;
+}
+
+.notifications-categories ul #unread-notifications, 
+.notifications-categories ul #all-notifications {
+	background-color: #FFF;
+	border-color: #ef5a49;
+	color: #ef5a49;
+	font-weight: normal;
+	font-size: 15px;
+	text-shadow: none;
+}
+
+.notifications-categories ul a.ui-link.ui-btn.ui-btn-active {
+	text-shadow: none;
+}
+
+.notifications-categories ul #unread-notifications span.title {
+	display: inline-block; 
+	float: left;
+}
+
+.notifications-categories ul #unread-notifications span.count {
+	display: block;
+	float: left;
+	margin-left: 20px;
+	border: 1px solid #000;
+	color: #ef5a49;
+	font-size: 20px;
+	width: 28px;
+	height: 28px;
+	-moz-border-radius: 22px;
+	-webkit-border-radius: 22px;
+	border-radius: 22px;
+}
+
+.notifications-categories ul #unread-notifications span.count > span {
+	-moz-border-radius: 22px;
+	-webkit-border-radius: 22px;
+	border-radius: 22px;
+}
+
+.notifications-categories ul li {
+	box-shadow: none;
+	border: none;
+	background-color: #FFF;
+}
+
+.notifications-categories ul li {
+	box-shadow: none;
+	border: none;
+	background-color: #FFF;
+}
+
+.notifications-categories {
+	box-shadow: none;
+	border: none;
+}
+
+.ui-listview > li p.notification-core {
+	display: block;
+	max-height: 32px;
+	overflow: hidden;
+	white-space: initial;
+}
+
+.ui-listview > li p.notification-core::after {
+	content: ' ...';
+}
+
+.delete-button {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.delete-button a.ui-btn {
+	width: 68px;
+	margin: 0px;
+	float: right;
+	border: none;
+}
+
+.delete-button a.delete-btn, 
+.delete-button a.delete-btn:active, 
+.delete-button a.delete-btn:visited, 
+.delete-button a.delete-btn:focus, 
+.delete-button a.delete-btn:hover {
+	color: white;
+	background-color: red;
+	text-shadow: none;
+}
+
+.notification-item-a {
+	padding-top: 1em;
+	padding-bottom: 1em;
+	padding-left: 1em;
+	position: relative;
+	height: 65px;
+	background: #FFF;
+	box-shadow: none;
+	border-radius: 0;
+	border-color: #ef5a49;
+	background-color: #FFF;
+}
+
+.notifications-list.ui-listview.ui-listview-inset.ui-corner-all.ui-shadow {
+	box-shadow: none;
+}
+
+.notifications-list.ui-listview.ui-listview-inset.ui-corner-all.ui-shadow li {
+	border-radius: 0;
+}
+
+.notifications-list.ui-listview.ui-listview-inset.ui-corner-all.ui-shadow li a.ui-icon-carat-r:after {
+	background-color: transparent;
+	background-image: url("../../images/content/arrow_right.png");
+	background-position: center;
+	background-size: 10px;
+	background-repeat: no-repeat;
+}
+
+.notification-item-a.ui-btn.ui-btn-icon-right.ui-icon-carat-r {
+	border-color: #ef5a49;
+	background-color: #FFF;
+	box-shadow: none;
+}
+
+.notification-item-a .ui-li-thumb {
+	width: 65px;
+	height: 65px;
+	border-radius: 100px;
+	background-position: center;
+	background-size: cover;
+	background-color: #000;
+	background-image: url("../../images/mehdi.jpg");
+	float: left;
+	margin-right: 1em; 
+	position: absolute;
+	left: 15px;
+}
+
+.notification-item-a.ui-btn.ui-btn-icon-right.ui-icon-carat-r:active, 
+.notification-item-a.ui-btn.ui-btn-icon-right.ui-icon-carat-r:focus {
+	background-color: #ef5a49;
+}
+
+.notification-item-a.ui-btn.ui-btn-icon-right.ui-icon-carat-r:active .ui-li-text, 
+.notification-item-a.ui-btn.ui-btn-icon-right.ui-icon-carat-r:focus .ui-li-text {
+	color: #FFF;
+}
+
+.notification-item-a .ui-li-text {
+	position: absolute;
+	right: 50px;
+	left: 100px;
+}
+
+.load-more {
+	margin-top: 50px;
+	margin-bottom: 50px;
+	text-align: right;
+}

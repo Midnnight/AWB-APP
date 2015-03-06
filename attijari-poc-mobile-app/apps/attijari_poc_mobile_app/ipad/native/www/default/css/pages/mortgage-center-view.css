@@ -1,0 +1,146 @@
+
+/* Stylesheet content from css/pages/mortgage-center-view.css in folder common */
+#mortgage-center-view-wrapper {
+	width: 100%;
+	height: 100%;
+}
+
+.mortgage-center-view-content {
+	width: 100%;
+	height: 100%;
+}
+
+.paths {
+	width: 100%;
+	height: 100%;
+	border-spacing: 0px;
+	position: relative;
+}
+
+.paths tr {
+	width: 100%;
+	position: relative;
+}
+
+.paths tr td.path {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+}
+
+.paths tr td.path.advertisement {
+	width: 100%;
+	height: 434px;
+	 	background-image: url(../../images/content/advertisements_mortgage.jpg); 
+}
+
+.paths tr td.path.new-mortgage {
+	width: 50%;
+	border-right: 1px solid #FFF;
+ 	background-image: url(../../images/content/new_mortgage.jpg); 
+}
+
+.paths tr td.path.refinancing {
+	width: 50%;
+	border-left: 1px solid #FFF;
+ 	background-image: url(../../images/content/refinancing_mortgage.jpg); 
+}
+
+.paths tr td.path.applications {
+	width: 50%;
+	border-right: 1px solid #FFF;
+	background-image: url(../../images/content/view_application_mortgage.jpg); 
+}
+
+.paths tr td.path.mortgage-simulator {
+	width: 50%;
+	border-left: 1px solid #FFF;
+ 	background-image: url(../../images/content/simulator_mortgage.jpg); 
+}
+
+.paths tr.spacer {
+	height: 2px;
+}
+
+.paths tr.offer-autoloan td p.top-title {
+	color: #FFF;
+}
+
+.paths tr td div.bottom-title-effect {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: 0;
+	height: 45px;
+	background-color: #5e5e5e;
+	opacity: 0.5;
+}
+
+.paths tr td p.bottom-title {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: 0;
+	text-align: right;
+	color: #FFF;
+	padding: 5px;
+	font-size: 25px;
+	z-index: 10;
+}
+
+#button-div {
+	position: absolute;
+	left: 5px;
+	right: 5px;
+	bottom: 0px;
+	margin-bottom: 5px;
+}
+
+.ui-title #button-div .ui-block-a,
+.ui-title #button-div .ui-block-b {
+	text-shadow: none;
+	margin: 0px;
+	height: 39px;
+}
+
+.ui-title #button-div .ui-block-b {
+	border-radius: 0px 0px 5px 0px;
+}
+
+.ui-title #button-div .ui-block-a a,
+.ui-title #button-div .ui-block-b a {
+	color: #ef5a49;
+	background-color: #FFF;
+	font-weight: normal;
+	display: block;
+	width: 99%;
+	height: 36px;
+	line-height: 36px;
+	border: 1px solid #ef5a49;
+	border-radius: 0px 0px 5px 0px;
+	text-decoration: none;
+}
+
+.ui-title #button-div .ui-block-a a {
+	border-radius: 0px 0px 0px 5px;
+}
+
+.ui-title #button-div .ui-block-a a:active,
+.ui-title #button-div .ui-block-b a:active, 
+.ui-title #button-div .ui-block-a a:focus,
+.ui-title #button-div .ui-block-b a:focus,
+.ui-title #button-div .ui-block-a a:hover,
+.ui-title #button-div .ui-block-b a:hover {
+	color: #FFF;
+	background-color: #ef5a49;
+	text-shadow: none;
+}
+
+#popupDialog-popup {
+	width: 45%;
+	top: 435px;
+	left: 27.5%;
+}
