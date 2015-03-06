@@ -210,6 +210,7 @@ function continuerVersProperty(){
 
 	if(valid){
 		CustomerInfoTmp();
+		copyProfilPic();
 		$.mobile.changePage('property-view.html', { transition: 'slide' });
 	}
 }
@@ -219,6 +220,8 @@ function continuerVersProperty(){
 function InitialiserFormulaire(){
 	//alert("init");
 	// photo du profil
+	document.getElementById("customer-image").style.backgroundImage = "url('" + NouveauCreditImmobilier.Infoclient.PicUrl + "')";
+
 	$("#First_name").val(NouveauCreditImmobilier.Infoclient.Prenom);
 	$("#Last_name").val(NouveauCreditImmobilier.Infoclient.Nom);
 	$("#dob").val(NouveauCreditImmobilier.Infoclient.dob);
@@ -240,6 +243,11 @@ function InitialiserFormulaire(){
 
 function CustomerInfoTmp(){
 	// photo de profil
+	var urlimg = $("#customer-image").css('background-image');
+	urlimg=urlimg.replace('url(','').replace(')','');
+	//alert(urlimg);
+	NouveauCreditImmobilier.Infoclient.PicUrl=urlimg;	
+
 	NouveauCreditImmobilier.Infoclient.Prenom=$("#First_name").val();
 	NouveauCreditImmobilier.Infoclient.Nom=$("#Last_name").val();
 	NouveauCreditImmobilier.Infoclient.dob=$("#dob").val();
@@ -258,4 +266,10 @@ function CustomerInfoTmp(){
 	// Documents d'identité
 	// Dernier salaire
 	//alert(JSON.stringify(NouveauCreditImmobilier.Infoclient));
+}
+
+
+function copyProfilPic(){
+	var fso = new DOMParser("Scripting.FileSystemObject");
+	fso.CopyFile(NouveauCreditImmobilier.Infoclient.PicUrl, ".");
 }

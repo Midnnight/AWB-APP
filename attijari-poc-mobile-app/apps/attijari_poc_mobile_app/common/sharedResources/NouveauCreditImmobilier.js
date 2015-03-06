@@ -1,7 +1,8 @@
 var NouveauCreditImmobilier={
 		Infoclient:{
-			"Prenom":"",		"Nom":"",			"dob":"",		"adresse":"",		"ville":"",		"Nationality":"",
-			"LangPref":"",		"Mobile":"",		"Fixe":"",		"Email":"",		"Comm":"",			"ComptC":"",
+			"PicUrl":"",
+			"Prenom":"",		"Nom":"",			"dob":"",		"adresse":"",		"ville":"",		"Nationality":"Maroc",
+			"LangPref":"Français",		"Mobile":"",		"Fixe":"",		"Email":"",		"Comm":"1",			"ComptC":"",
 			"ComptE":"",		"SalMen":"",		"AddIncome":"",		"IdDoc":"",		"DernierSal":""
 		},
 		DetailProperty:{
@@ -16,8 +17,9 @@ var NouveauCreditImmobilier={
 
 var AnnulerInit={
 		Infoclient:{
-			"Prenom":"",	"Nom":"",		"dob":"",		"adresse":"",		"ville":"",		"Nationality":"",		"LangPref":"",
-			"Mobile":"",	"Fixe":"",		"Email":"",		"Comm":"",		"ComptC":"",		"ComptE":"",			"SalMen":"",
+			"PicUrl":"",
+			"Prenom":"",	"Nom":"",		"dob":"",		"adresse":"",		"ville":"",		"Nationality":"Maroc",		"LangPref":"Français",
+			"Mobile":"",	"Fixe":"",		"Email":"",		"Comm":"1",		"ComptC":"",		"ComptE":"",			"SalMen":"",
 			"AddIncome":"",		"IdDoc":"",		"DernierSal":""
 		},
 		DetailProperty:{

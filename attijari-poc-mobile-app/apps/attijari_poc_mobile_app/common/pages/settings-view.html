@@ -3,7 +3,7 @@
 	<link rel="stylesheet" href="../css/pages/settings-view.css" />
 
 	<div data-role="popup" id="languagePopup" class="ui-content"
-		data-dismissible="true" data-theme="a" data-transition="fade">
+		data-dismissible="true" data-theme="a" data-transition="pop">
 		<div data-rold="header" class="header" data-theme="a">
 			<h1>Changer la langue</h1>
 		</div>
@@ -28,8 +28,8 @@
 				src="../images/header/drawer_menu_header_button.png" />
 			</a> <a href="notifications-center-view.html" class="top-notifications"
 				data-transition="slide"> <img alt="top-notifications"
-				src="../images/header/top_notification_button.png" />
-				<span class="counter"></span>
+				src="../images/header/top_notification_button.png" /> <span
+				class="counter"></span>
 			</a>
 		</div>
 		<div class="left">
@@ -78,10 +78,11 @@
 
 					<h3>Langue</h3>
 					<p class="select">
-						<select name="flip" id="language-flip" data-role="slider">
-							<option value="french">Français</option>
+						<label for="language-flip">Langue par défaut</label> <select
+							name="language-flip" id="language-flip" data-role="slider">
+							<option value="french">french</option>
 							<option value="arabic">العربية</option>
-						</select> <label for="light">Langue par défaut</label>
+						</select>
 					</p>
 
 					<h3>A propos de</h3>

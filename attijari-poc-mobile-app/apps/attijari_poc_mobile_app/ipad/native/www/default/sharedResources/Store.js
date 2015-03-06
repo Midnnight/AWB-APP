@@ -1,5 +1,6 @@
 
 /* JavaScript content from sharedResources/Store.js in folder common */
+var initstore= 0;
 var collections = {
 	store : {
 		searchFields : {

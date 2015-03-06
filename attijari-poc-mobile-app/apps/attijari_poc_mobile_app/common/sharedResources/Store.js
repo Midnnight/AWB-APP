@@ -1,3 +1,4 @@
+var initstore= 0;
 var collections = {
 	store : {
 		searchFields : {

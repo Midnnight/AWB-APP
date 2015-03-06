@@ -12,11 +12,11 @@ $("#language-flip").slider({
 });
 
 $(".language-actions .ui-block-a a").on("click", function() {
-	$("#languagePopup").popup("close");
+	//$("#languagePopup").popup("close");
 });
 
 $(".language-actions .ui-block-b a").on("click", function() {
-	$("#languagePopup").popup("close");
+	//$("#languagePopup").popup("close");
 });
 
 $('#receive').attr('checked',receiveNotification[0].json.value);

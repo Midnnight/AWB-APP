@@ -1,7 +1,6 @@
 var customer_index = -1;
 var application_index = 0;
 var connected = 0;
-
 var countZoom = 0;
 var zoom = 0;
 
@@ -69,13 +68,20 @@ function changeSize () {
 function initstore(){
 
 	//WL.JSONStore.destroyAll();
-	
 	return WL.JSONStore.init(collections)
 
 	.then(function () { 
-		WL.JSONStore.get('store').replace(receiveNotification);
-		WL.JSONStore.get('store').replace(soundNotification);
-		WL.JSONStore.get('store').replace(lightNotification);
+		if(initstore==0){
+			WL.JSONStore.get('store').add(receiveNotification);
+			WL.JSONStore.get('store').add(soundNotification);
+			WL.JSONStore.get('store').add(lightNotification);
+			initstore=1;
+		}
+		else {
+			WL.JSONStore.get('store').replace(receiveNotification);
+			WL.JSONStore.get('store').replace(soundNotification);
+			WL.JSONStore.get('store').replace(lightNotification);
+		}
 	}) 
 	.fail(function(errorObject) {
 		//
