@@ -5,6 +5,13 @@ var count = 0;
 var answer = "";
 var chatType = "text";
 
+$(".name").text(expertInfo[exepertId].name);
+$(".job-title").text(expertInfo[exepertId].job);
+$(".phone").text(expertInfo[exepertId].phone);
+$(".address").text(expertInfo[exepertId].address);
+$(".city").text(expertInfo[exepertId].city);
+$(".expert-thumbnail").css('background-image','url('+expertInfo[exepertId].pic+')');
+
 var videoPlayer = document.getElementById ('videoPlayer');
 
 $(".bottom-actions .chat-text-content .send").on ("click", function () {

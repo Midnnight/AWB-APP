@@ -10,6 +10,7 @@
 /css/pages/customers-search-view.css
 /css/pages/document-preview-view.css
 /css/pages/employee-profile-view.css
+/css/pages/expert-list-view.css
 /css/pages/faqs-view.css
 /css/pages/forgot-password-view.css
 /css/pages/help-center-view.css
@@ -419,6 +420,7 @@
 /js/pages/customers-search-view.js
 /js/pages/document-preview-view.js
 /js/pages/employee-profile-view.js
+/js/pages/expert-list-view.js
 /js/pages/faqs-view.js
 /js/pages/forgot-password-view.js
 /js/pages/help-center-view.js
@@ -451,6 +453,7 @@
 /pages/customers-search-view.html
 /pages/document-preview-view.html
 /pages/employee-profile-view.html
+/pages/expert-list-view.html
 /pages/faqs-view.html
 /pages/forgot-password-view.html
 /pages/help-center-view.html
@@ -474,6 +477,7 @@
 /pages/settings-view.html
 /pages/splash-view.html
 /pages/submit-problem-view.html
+/sharedResources/chatObject.js
 /sharedResources/customersObject.js
 /sharedResources/NouveauCreditImmobilier.js
 /sharedResources/Store.js

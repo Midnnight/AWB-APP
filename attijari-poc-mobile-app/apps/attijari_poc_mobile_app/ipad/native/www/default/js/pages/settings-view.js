@@ -4,7 +4,7 @@ $('.counter').text(counter).show();
 
 var path = 0;
 
-$('#receive').attr('checked',receiveNotification[0].json.value);
+$('#receive').attr('checked', receiveNotification[0].json.value);
 $('#sound').attr('checked', soundNotification[0].json.value);
 $('#light').attr('checked', lightNotification[0].json.value);
 $("#language-flip").val(langue[0].json.value);
@@ -20,23 +20,26 @@ $("#language-flip").slider({
 });
 
 $(".language-actions .ui-block-a a").on("click", function() {
-	path =0;
+	path = 0;
 	$("#languagePopup").popup("close");
 });
 
 $(".language-actions .ui-block-b a").on("click", function() {
-	path =1;
+	path = 1;
 	$("#languagePopup").popup("close");
 });
 
-$( "#languagePopup" ).bind({
-	popupafterclose: function(event, ui) {
-		if(path == 1){
-			//loadPage ("home-view.html");
+$("#languagePopup").bind({
+	popupafterclose : function(event, ui) {
+		if (path == 1) {
 			$("#language-flip").val().slider("refresh");
-		}
-		else{
-			$("#language-flip").val(!$("#language-flip").val()).slider("refresh");
+		} else {
+			var tmp = $("#language-flip").val();
+			if (tmp == 'french') {
+				$("#language-flip").val('arabic').slider("refresh");
+			} else {
+				$("#language-flip").val('french').slider("refresh");
+			}
 		}
 	}
 })
@@ -77,23 +80,22 @@ $("#sound").on("click", function() {
 
 		// Dependencies
 		var $ = jQuery, _ = lodash;
-       
+
 		soundNotification[0].json.value = $("#sound").is(':checked');
 
 	}(WL, WLJQ, WL_));
 });
 
+$("#languagePopup").bind({
+	popupafteropen : function(event, ui) {
 
-$( "#languagePopup" ).bind({
-	popupafteropen: function(event, ui) {
+		(function(WL, jQuery, lodash) {
 
-	(function(WL, jQuery, lodash) {
+			'use strict';
 
-		'use strict';
-
-		// Dependencies
-		var $ = jQuery, _ = lodash;
-		langue[0].json.value = $("#language-flip").val();
-	}(WL, WLJQ, WL_));
+			// Dependencies
+			var $ = jQuery, _ = lodash;
+			langue[0].json.value = $("#language-flip").val();
+		}(WL, WLJQ, WL_));
 	}
 });
