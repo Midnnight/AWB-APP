@@ -5,6 +5,7 @@ var pic = "";
 var status = "";
 var msg = "";
 var currentAllchat = 0;
+unreadMsg = chatInfo.length ;
 $('.counter').text(counter).show();
 $('.unreadMsg').text(unreadMsg).show();
 
@@ -25,7 +26,7 @@ function fillList(count, list, append, all) {
 		status = list[i].status;
 		msg = list[i].name + '<br/>' + list[i].job;
 
-		content += '<li>';
+		content += '<li class="li-item">';
 		content += '<a class="chat-item-a" id=' + listItemId
 		+ ' data-transition="slide">';
 		content += '<div class="ui-li-thumb"' + pic + '></div>';
@@ -56,12 +57,15 @@ function fillList(count, list, append, all) {
 	} else {
 		$(".msg-list").append(content);
 	}
+	
 	if ($(".msg-list").hasClass("ui-listview")) {
 		$(".msg-list").listview("refresh");
 	} else {
 		$(".msg-list").listview();
 	}
-
+    
+	//$(".chat-item-a.ui-btn.ui-btn-icon-right.ui-icon-carat-r").css('background-color','#f7b82e');
+	
 	for (i = 0; i < count; i++) {
 
 		var id = "#listItemId-" + i;
@@ -81,7 +85,8 @@ function fillList(count, list, append, all) {
 		exepertId = $(this).attr("id");
 		exepertId = exepertId.split("-");
 		exepertId = parseInt(exepertId[1]);
-		loadPage("ask-expert-view.html");
+		$(".msg-list a.chat-item-a").css('background-color','#f7b82e');
+		//loadPage("ask-expert-view.html");
 	});
 }
 

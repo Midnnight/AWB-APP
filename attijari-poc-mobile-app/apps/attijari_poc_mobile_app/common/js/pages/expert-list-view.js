@@ -3,9 +3,9 @@ var pic = "";
 var status = "";
 var msg = "";
 var currentAllchat = 0;
-$('.counter').text(counter).show();
-$('.unreadMsg').text(unreadMsg).show();
+var cmp = chatInfo.length;
 
+$('.counter').text(counter).show();
 $("#list-chat").addClass($.mobile.activeBtnClass);
 fillList(counter, chatInfo, false, false);
 
@@ -23,7 +23,7 @@ function fillList(count, list, append, all) {
 		status = list[i].status;
 		msg = list[i].name + '<br/>' + list[i].job;
 
-		content += '<li>';
+		content += '<li class="li-item">';
 		content += '<a class="chat-item-a" id=' + listItemId
 		+ ' data-transition="slide">';
 		content += '<div class="ui-li-thumb"' + pic + '></div>';
@@ -54,14 +54,17 @@ function fillList(count, list, append, all) {
 	} else {
 		$(".msg-list").append(content);
 	}
+	
 	if ($(".msg-list").hasClass("ui-listview")) {
 		$(".msg-list").listview("refresh");
 	} else {
 		$(".msg-list").listview();
 	}
-
+    
+	//$(".chat-item-a.ui-btn.ui-btn-icon-right.ui-icon-carat-r").css('background-color','#f7b82e');
+	
 	for (i = 0; i < count; i++) {
-
+       
 		var id = "#listItemId-" + i;
 		if ($(id + ' .ui-li-text .state').text() == "En ligne") {
 
@@ -73,12 +76,19 @@ function fillList(count, list, append, all) {
 				'color' : 'red'
 			});
 		}
+		
+		if(list[i].msgstate == "read"){
+			$(".msg-list " + id).css('background-color','#FFF');
+			cmp = cmp -1 ;
+		}
 	}
-
+	unreadMsg = cmp ;
+	$('.unreadMsg').text(unreadMsg).show();
 	$(".msg-list a.chat-item-a").on("click", function(event) {
 		exepertId = $(this).attr("id");
 		exepertId = exepertId.split("-");
 		exepertId = parseInt(exepertId[1]);
+		list[exepertId].msgstate ="read";
 		loadPage("ask-expert-view.html");
 	});
 }
