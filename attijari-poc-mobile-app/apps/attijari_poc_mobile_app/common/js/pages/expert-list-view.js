@@ -7,10 +7,10 @@ var cmp = chatInfo.length;
 
 $('.counter').text(counter).show();
 $("#list-chat").addClass($.mobile.activeBtnClass);
-fillList(counter, chatInfo, false, false);
+fillList(chatInfo.length, chatInfo, false, false);
 
 $("#list-chat").on("click", function() {
-	fillList(counter, chatInfo, false, false);
+	fillList(chatInfo.length, chatInfo, false, false);
 });
 
 function fillList(count, list, append, all) {

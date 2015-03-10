@@ -1,31 +1,35 @@
 
 /* JavaScript content from sharedResources/chatObject.js in folder common */
-var unreadMsg = 3;
+var unreadMsg = 4;
 var exepertId = 0;
 var chatInfo = [ 
                 {
                 	pic : " style='background-image: url(../images/souhail.jpg);'",
                 	status : "Hors ligne",
                 	name : "Souhail Guennouni",
-                	job : "Expert Crédits Immobiliers"
+                	job : "Expert Crédits Immobiliers",
+                	msgstate : "unread"
                 },
                 {
                 	pic : " style='background-image: url(../images/mehdi.jpg);'",
                 	status : "En ligne",
                 	name : "El Mehdi",
-                	job : "Expert Crédits Automobile"
+                	job : "Expert Crédits Automobile",
+                	msgstate : "read"
                 },
                 {
                 	pic : " style='background-image: url(../images/ayoub.jpg);'",
                 	status : "En ligne",
                 	name : "ayoub",
-                	job : "Expert Crédits Immobiliers"
+                	job : "Expert Crédits Immobiliers",
+                	msgstate : "unread"
                 },
                 {
                 	pic : " style='background-image: url(../images/cristian.jpg);'",
                 	status : "Hors ligne",
                 	name : "cristian",
-                	job : "Expert Assurances"
+                	job : "Expert Assurances",
+                	msgstate : "unread"
                 } ];
 
 var expertInfo = [ 
