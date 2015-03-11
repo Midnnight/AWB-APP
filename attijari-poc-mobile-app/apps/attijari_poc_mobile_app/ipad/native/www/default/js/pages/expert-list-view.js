@@ -9,23 +9,24 @@ var cmp = chatInfo.length;
 
 $('.counter').text(counter).show();
 $("#list-chat").addClass($.mobile.activeBtnClass);
-fillList(counter, chatInfo, false, false);
+fillList(chatInfo.length, chatInfo, false, false);
 
 $("#list-chat").on("click", function() {
-	fillList(counter, chatInfo, false, false);
+	fillList(chatInfo.length, chatInfo, false, false);
 });
 
 function fillList(count, list, append, all) {
 	var content = "";
 	$(".msg-list").html("");
-
+	var i=0;
 	for (i = 0; i < count; i++) {
 
 		pic = list[i].pic;
 		status = list[i].status;
 		msg = list[i].name + '<br/>' + list[i].job;
 
-		content += '<li class="li-item">';
+		content += '<li class="li-item" id="'+i+'">';
+		content += '<div class="sendEmail" id="call'+i+'"><a class="button-chat">CHAT</a><br/><a class="button-chat purple">CHAT</a></div>';
 		content += '<a class="chat-item-a" id=' + listItemId
 		+ ' data-transition="slide">';
 		content += '<div class="ui-li-thumb"' + pic + '></div>';
@@ -80,8 +81,11 @@ function fillList(count, list, append, all) {
 		}
 		
 		if(list[i].msgstate == "read"){
-			$(".msg-list " + id).css('background-color','#FFF');
+			$(id).css('background-color','#FFF');
 			cmp = cmp -1 ;
+		}
+		else{
+			$(id).css('background-color','#f7b82e');
 		}
 	}
 	unreadMsg = cmp ;
@@ -97,4 +101,16 @@ function fillList(count, list, append, all) {
 
 $(".load-more").on("click", function() {
 	fillList(10, chatInfo, true, true);
+});
+
+
+$('.msg-list').children('li').on('swipeleft', function () {
+	var expert =$(this);
+	expert.animate({ left:'-20%' }, 500);
+
+});
+
+$('.msg-list').children('li').on('swiperight', function () {
+	var expert =$(this);
+	expert.animate({ left:'0%' }, 500);
 });

@@ -1,9 +1,18 @@
 
 /* Stylesheet content from css/pages/expert-list-view.css in folder common */
+#chat-wrapper {
+	width: 100%;
+	height: 100%;
+	max-width: 100%;
+    overflow-x: hidden;
+}
+
 .chat-content {
-	padding-top: 30px;
-	padding-left: 15px;
+	padding-top  : 30px;
+	padding-left : 15px;
 	padding-right: 15px;
+	max-width: 100%;
+    overflow-x: hidden;
 }
 
 .ui-li-text h3 {
@@ -150,8 +159,16 @@
 
 .chat-item-a.ui-btn.ui-btn-icon-right.ui-icon-carat-r {
 	border-color: #ef5a49;
-	background-color: #f7b82e;
+	/*background-color: #f7b82e;*/
 	box-shadow: none;
+}
+
+.read{
+	background-color: #fff;
+}
+
+.unread{
+	background-color: #f7b82e;
 }
 
 .chat-item-a .ui-li-thumb {
@@ -175,7 +192,7 @@
 
 .chat-item-a.ui-btn.ui-btn-icon-right.ui-icon-carat-r:active .ui-li-text, 
 .chat-item-a.ui-btn.ui-btn-icon-right.ui-icon-carat-r:focus .ui-li-text {
-	color: #FFF;
+	color: #AAA;
 }
 
 .chat-item-a .ui-li-text {
@@ -191,5 +208,34 @@
 }
 
 .state{
-	position: absolute;left:84%;
+	position: absolute;
+	left:84%;
+}
+
+.sendEmail{
+	position: absolute;
+	/*right: 0;*/
+	left:105%;
+	top: 0;
+	bottom: 0;
+	margin: 0;
+	width: 20%;
+	line-height: 100px;
+	background: #fff;
+	text-shadow: none;
+	color: #FFF;
+	text-align: center;
+}
+
+.button-chat {
+  width : 100%;
+  height: 50%;
+  background-color:rgb(41,127,184);
+  color:rgb(255,255,255);
+  text-transform: uppercase;
+}
+
+
+.button-chat.purple {
+  background: #8e44ad;
 }

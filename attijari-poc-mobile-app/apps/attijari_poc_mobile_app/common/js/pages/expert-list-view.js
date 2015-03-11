@@ -16,14 +16,16 @@ $("#list-chat").on("click", function() {
 function fillList(count, list, append, all) {
 	var content = "";
 	$(".msg-list").html("");
-
+	var i=0;
 	for (i = 0; i < count; i++) {
 
 		pic = list[i].pic;
 		status = list[i].status;
 		msg = list[i].name + '<br/>' + list[i].job;
 
-		content += '<li class="li-item">';
+		content += '<li class="li-item" id="'+i+'">';
+		content += '<div class="sendEmail" id="call'+i+'"><div class="button-chat"><img src="../images/MessagesIcon.png" width="65%"></div>'
+					+'<div class="button-chat purple"><img src="../images/cam-icon.png" width="65%"></div></div>';
 		content += '<a class="chat-item-a" id=' + listItemId
 		+ ' data-transition="slide">';
 		content += '<div class="ui-li-thumb"' + pic + '></div>';
@@ -78,11 +80,20 @@ function fillList(count, list, append, all) {
 		}
 		
 		if(list[i].msgstate == "read"){
-			$(".msg-list " + id).css('background-color','#FFF');
+			$(id).css('background-color','#FFF');
 			cmp = cmp -1 ;
 		}
+		else{
+			$(id).css('background-color','#f7b82e');
+		}
 	}
-	unreadMsg = cmp ;
+	unreadMsg = "" ;
+	if(cmp > 1){
+		unreadMsg="( "+cmp+" non-lus )";
+	}
+	else if(cmp == 1){
+		unreadMsg="( "+cmp+" non-lu )";
+	}
 	$('.unreadMsg').text(unreadMsg).show();
 	$(".msg-list a.chat-item-a").on("click", function(event) {
 		exepertId = $(this).attr("id");
@@ -95,4 +106,16 @@ function fillList(count, list, append, all) {
 
 $(".load-more").on("click", function() {
 	fillList(10, chatInfo, true, true);
+});
+
+
+$('.msg-list').children('li').on('swipeleft', function () {
+	var expert =$(this);	
+	expert.animate({ left:'-20%' }, 500);
+
+});
+
+$('.msg-list').children('li').on('swiperight', function () {
+	var expert =$(this);
+	expert.animate({ left:'0%' }, 500);
 });
