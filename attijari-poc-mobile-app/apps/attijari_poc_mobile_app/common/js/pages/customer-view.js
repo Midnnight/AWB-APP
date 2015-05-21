@@ -208,7 +208,6 @@ function continuerVersProperty(){
 
 	if(valid){
 		CustomerInfoTmp();
-		copyProfilPic();
 		$.mobile.changePage('property-view.html', { transition: 'slide' });
 	}
 }
@@ -264,10 +263,4 @@ function CustomerInfoTmp(){
 	// Documents d'identité
 	// Dernier salaire
 	//alert(JSON.stringify(NouveauCreditImmobilier.Infoclient));
-}
-
-
-function copyProfilPic(){
-	var fso = new DOMParser("Scripting.FileSystemObject");
-	fso.CopyFile(NouveauCreditImmobilier.Infoclient.PicUrl, ".");
 }

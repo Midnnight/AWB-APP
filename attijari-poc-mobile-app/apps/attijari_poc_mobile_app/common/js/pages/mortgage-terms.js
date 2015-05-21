@@ -1,6 +1,7 @@
 $('.counter').text(counter).show();
 function envoyerDossier() {
 		confirmDialog("Envoyer la Demande?", function() {
+			sendData(NouveauCreditImmobilier);
 			NouveauCreditImmobilier=AnnulerInit;
 			loadPage("next-best-offer-view.html");
 		});

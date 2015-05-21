@@ -8,7 +8,7 @@ var customers = [ {
 	"Last_name" : "Mahmoudi",
 	"Nationality" : "Maroc",
 	"Email" : "az@gmail.com",
-	"adresse" : "Sidi Ma�rouf, Casablanca",
+	"adresse" : "Sidi Maarouf, Casablanca",
 	"ville" : "Casablanca",
 	"Mobile" : "(212)-6757657 676545",
 	"Monthly_income" : "60000",
