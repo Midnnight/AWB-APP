@@ -26,5 +26,6 @@
 	<!-- Replace this with appropriate procedures -->
 	<procedure name="storeKeys"/>
 	<procedure name="storeCipherData"/>
+	<procedure name="storeServerKeys"/>
 
 </wl:adapter>
