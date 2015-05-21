@@ -10,17 +10,17 @@ var RSA_PubKey="";
 
 //check if device and the operator is registred and legal
 function checkDevice(id){
-	//var size=2048;
-	//generate(size);
+	var size=2048;
+	generate(size);
 	var testDB = WL.Server.invokeProcedure({
 		adapter : 'DBStore',
-		procedure : 'storeKeys',
-		parameters : [id.toString(), "n/a", RSA_PubKey.toString(), RSA_PrvKey.toString(), "n/a"]
+		procedure : 'storeServerKeys',
+		parameters : [RSA_PubKey.toString(), RSA_PrvKey.toString()]
 	});
 	if(testDB.isSuccessful)
-		return {pubkey : RSA_PubKey};
+		return {state : "Good"};
 	else
-		return {pubkey : "error", info : testDB};
+		return {state : "error", info : testDB};
 }
 
 /*  
