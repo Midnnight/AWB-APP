@@ -29,9 +29,6 @@ function storeCipherData(id, cipherkey, cipherMsg) {
 
 
 
-
-
-
 var SelectAllStatement = WL.Server.createSQLStatement("select * from devicepublickey");
 function SelectAllfromDB() {
 	return WL.Server.invokeSQLStatement({
@@ -53,3 +50,13 @@ function IDExist(id){
 	}
 	return exist;
 }
+
+var requete="update serverkeys set publickey = ? , privatekey = ? where publickey in (select publickey from (select * from serverkeys) as tempTable)";
+var storeServerKeysStatement = WL.Server.createSQLStatement(requete);
+function storeServerKeys(publicKey, privatKey){
+	return WL.Server.invokeSQLStatement({
+		preparedStatement : storeServerKeysStatement,
+		parameters : [publicKey, privatKey]
+	});
+}
+
