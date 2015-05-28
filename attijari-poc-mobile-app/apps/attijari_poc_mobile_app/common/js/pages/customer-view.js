@@ -1,3 +1,7 @@
+// la taille et l'encodage en base64 de l'image du profil
+var profilPicSize=0;
+var profilPic="";
+
 $('.counter').text(counter).show();
 $("#takePictureField").on ("change", gotPic);
 	
@@ -48,7 +52,16 @@ $("#takePictureField").on ("change", gotPic);
 
 function gotPic(event) {
 	if (event.target.files.length == 1 && event.target.files[0].type.indexOf("image/") == 0) {
-		document.getElementById("customer-image").style.backgroundImage = "url('" + (URL.createObjectURL(event.target.files[0])) + "')";
+		profilPicSize=this.files[0].size;
+		if( this.files && this.files[0] ) {
+			var FR= new FileReader();
+			FR.onload = function(e) {
+				profilPic=e.target.result;
+				document.getElementById("customer-image").style.backgroundImage = "url('" + profilPic + "')";
+				//$("#customer-image").css("background-image", "url('" + profilPic + "')");
+			};
+	       FR.readAsDataURL( this.files[0] );
+		}
 	}
 }
 
@@ -152,6 +165,16 @@ function checkRegexp( o, regexp, n ) {
     }
   }
 
+function checkPic(){
+	if(profilPicSize < 800000){
+		return true;
+	}
+	else{
+		updateTips("La taille de l'image doit etre inferieur à 780 Ko !");
+		return false;
+	}
+}
+
 function continuerVersProperty(){
 	
 	// Les expression régulières pour la validation des champs des formulaires
@@ -181,6 +204,8 @@ function continuerVersProperty(){
 	//var derSal=$("#");
 	
 	var valid = true;
+	
+	valid=valid && checkPic();
 	
 	valid = valid && checkRegexp( fname, nomRegex, "Prénom ne peut contenir que des lettres nimiscules ou majuscules." );
 	valid=valid && checkLength( fname, "Prénom", 3, 16 );
@@ -215,9 +240,8 @@ function continuerVersProperty(){
 /* Initialisation / restitution des champs du formulaire */
 
 function InitialiserFormulaire(){
-	//alert("init");
 	// photo du profil
-	document.getElementById("customer-image").style.backgroundImage = "url('" + NouveauCreditImmobilier.Infoclient.PicUrl + "')";
+	document.getElementById("customer-image").style.backgroundImage = "url('" + NouveauCreditImmobilier.Infoclient.PicBase64 + "')";
 
 	$("#First_name").val(NouveauCreditImmobilier.Infoclient.Prenom);
 	$("#Last_name").val(NouveauCreditImmobilier.Infoclient.Nom);
@@ -240,10 +264,7 @@ function InitialiserFormulaire(){
 
 function CustomerInfoTmp(){
 	// photo de profil
-	var urlimg = $("#customer-image").css('background-image');
-	urlimg=urlimg.replace('url(','').replace(')','');
-	//alert(urlimg);
-	NouveauCreditImmobilier.Infoclient.PicUrl=urlimg;	
+	NouveauCreditImmobilier.Infoclient.PicBase64=profilPic;	
 
 	NouveauCreditImmobilier.Infoclient.Prenom=$("#First_name").val();
 	NouveauCreditImmobilier.Infoclient.Nom=$("#Last_name").val();

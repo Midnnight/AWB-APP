@@ -29,7 +29,7 @@ function Encrypt(data,pubk){
 	        result += pidCryptUtil.fragment(pidCryptUtil.encodeBase64(pidCryptUtil.convertFromHex(crypted)),64);  
 	        return {resultat : pidCryptUtil.fragment(pidCryptUtil.encodeBase64(pidCryptUtil.convertFromHex(crypted)),64)};
 	        
-	       } else return {error:'Could not find public key.'};
+	       } else return {error: 'Could not find public key.'};
 	}
 
 
@@ -71,7 +71,7 @@ function inverser(str){
 
     /*
      * Inversation simple :
-     * while(i < ll) {      
+     * / while(i < ll) {      
         res[i] = String.fromCharCode(res[i].charCodeAt(0) + res[j].charCodeAt(0));
         res[j] = String.fromCharCode(res[i].charCodeAt(0) - res[j].charCodeAt(0));
         res[i] = String.fromCharCode(res[i].charCodeAt(0) - res[j].charCodeAt(0));

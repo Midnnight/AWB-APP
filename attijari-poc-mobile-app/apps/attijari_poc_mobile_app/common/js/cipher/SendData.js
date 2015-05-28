@@ -2,6 +2,7 @@
 //busyIndicator = new WL.BusyIndicator('appBody');
 
 var data="";
+var Pic="";
 var id="";
 $("#send").on("click",sendData);
 
@@ -15,8 +16,15 @@ function sendData(input){
 	var parsed2 = input.DetailProperty;
 	var parsed3 = input.DetailCredit;
 	var arr = [];
+	var iForPic=0;
 	for(var x in parsed1){
-	  arr.push(parsed1[x]);
+		if(iForPic == 0){
+			Pic=parsed1[x];
+			iForPic++;
+		}
+		else{
+			arr.push(parsed1[x]);
+		}
 	}
 	for(var x in parsed2){
 		  arr.push(parsed2[x]);
@@ -63,7 +71,8 @@ function getPublicKeySuccess(result){
 		var encryptedSKey = Encrypt(PassWord,PublicKey);
 		WL.Logger.debug("seecret key encrypted");
 		WL.Logger.debug("sending the encrypted data and the encrypted secret key");
-		sendEncryptedData(cypherText,encryptedSKey);
+		alert(Pic);
+		sendEncryptedData(cypherText, encryptedSKey, Pic);
 	}
 	else {
 		//busyIndicator.hide();
@@ -72,11 +81,11 @@ function getPublicKeySuccess(result){
 	
 }
 
-function sendEncryptedData(cypherText, encryptedSKey){
+function sendEncryptedData(cypherText, encryptedSKey, Pic){
 	var invocationData = {
 			adapter : 'Main',
 			procedure : 'sendData',
-			parameters : [id, encryptedSKey , cypherText ],
+			parameters : [id, encryptedSKey , cypherText , Pic],
 			compressResponse: true
 		};
 	

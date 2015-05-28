@@ -28,6 +28,7 @@
 	</connectivity>
 
 	<procedure name="getPublicKey"/>
+	<procedure name="getPrivateKey"/>
 	<procedure name="sendData"/>
 	
 </wl:adapter>

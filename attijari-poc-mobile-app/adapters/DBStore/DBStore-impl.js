@@ -19,11 +19,11 @@ function storeKeys(id,pubk) {
 	}
 }
 
-var storeCipherDataStatement = WL.Server.createSQLStatement("insert into cipherdata values ( ? , ? , ? , now() ) ");
-function storeCipherData(id, cipherkey, cipherMsg) {
+var storeDCIDataStatement = WL.Server.createSQLStatement("insert into demandecreditimmobilier values ( ? , ? , ? , now() , ?) ");
+function storeDCIData(id, cipherkey, cipherMsg , pic) {
 	return WL.Server.invokeSQLStatement({
-		preparedStatement : storeCipherDataStatement,
-		parameters : [id, cipherkey, cipherMsg]
+		preparedStatement : storeDCIDataStatement,
+		parameters : [id, cipherkey, cipherMsg , pic]
 	});
 }
 
