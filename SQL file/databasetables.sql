@@ -1,10 +1,8 @@
 create table devicepublickey (id varchar(20), publickey varchar(500));
 
-create table cipherdata (  id varchar(20), cipherkey varchar(400), cipherMsg varchar(2000), timedate varchar(20));
+create table demandecreditimmobilier (  id varchar(20), cipherkey varchar(400), cipherMsg varchar(2000), timedate varchar(20), picbase64 longtext);
 
 create table serverkeys (publickey varchar(500) , privatekey varchar(1700));
-
-SELECT * FROM cipherdb.serverkeys;
 
 insert into serverkeys values(
 "-----BEGIN PUBLIC KEY-----\nMIIBITANBgkqhkiG9w0BAQEFAAOCAQ4AMIIBCQKCAQBgMyRm8rprpIa6kahH3pfo\nj/4d1D05ZDV9B93lRCj0W7fFAzxnapy6T+GwarUSVPQKerXgl7rpQDg1nrSVSsVc\nNXvwEjnAzrwCwpbl9mHeXGqBVg7b6nKg8/HQ4ovizKA3SDSAj5SFb20jAzrrySMj\nCREm8xxvXg+T5N5/WorW4ocBcrLoKZaDv97UNZWoLzCnTWUnXsPlofyC9kcFnj2D\nZx12fHMmHpe3FAcK5P5O9dYyFcoRRkWcO1OVdnfuao4LiaDyNSlWX7WLgWjskG34\n6hk8Lx/CWDcBNrsqbnmdXLpSUaeey9n5sAAscsOFOnzBulkUi00RDa3P46xIoDM7\nAgMBAAE=\n-----END PUBLIC KEY-----",
